@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://propscan.local/schema/plan-1.0.0.json",
+  "title": "propscan property plan",
+  "description": "One capture in, one stitched whole-property plan out. All lengths in metres, areas in m2. Every measurement carries a calibrated 90% interval.",
+  "type": "object",
+  "required": ["schema_version", "capture", "confidence_level", "calibration", "rooms", "adjacency", "stitched_plan",
+               "damage", "concealed_damage_flags", "scope", "warnings", "timing"],
+  "$defs": {
+    "measure": {
+      "type": "object",
+      "required": ["value", "lo", "hi", "sigma", "unit"],
+      "properties": {
+        "value": {"type": "number"}, "lo": {"type": "number"}, "hi": {"type": "number"},
+        "sigma": {"type": "number", "minimum": 0}, "unit": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "point2": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+    "opening": {
+      "type": "object",
+      "required": ["id", "type", "wall_id", "center_offset", "width", "height", "sill_height", "connects_to"],
+      "properties": {
+        "id": {"type": "string"},
+        "type": {"enum": ["door", "window", "passage"]},
+        "wall_id": {"type": "string"},
+        "center_offset": {"$ref": "#/$defs/measure"},
+        "width": {"$ref": "#/$defs/measure"},
+        "height": {"$ref": "#/$defs/measure"},
+        "sill_height": {"$ref": "#/$defs/measure"},
+        "connects_to": {"type": ["string", "null"]}
+      }
+    },
+    "wall": {
+      "type": "object",
+      "required": ["id", "start", "end", "length", "height", "net_area", "observed_fraction"],
+      "properties": {
+        "id": {"type": "string"}, "start": {"$ref": "#/$defs/point2"}, "end": {"$ref": "#/$defs/point2"},
+        "length": {"$ref": "#/$defs/measure"}, "height": {"$ref": "#/$defs/measure"},
+        "net_area": {"$ref": "#/$defs/measure"}, "observed_fraction": {"type": "number"}
+      }
+    },
+    "room": {
+      "type": "object",
+      "required": ["id", "label", "kind", "polygon", "walls", "ceiling_height", "floor_area", "perimeter", "openings", "surfaces"],
+      "properties": {
+        "id": {"type": "string"}, "label": {"type": "string"}, "kind": {"enum": ["room", "connector"]},
+        "polygon": {"type": "array", "items": {"$ref": "#/$defs/point2"}, "minItems": 3},
+        "walls": {"type": "array", "items": {"$ref": "#/$defs/wall"}},
+        "ceiling_height": {"$ref": "#/$defs/measure"},
+        "floor_area": {"$ref": "#/$defs/measure"},
+        "perimeter": {"$ref": "#/$defs/measure"},
+        "openings": {"type": "array", "items": {"$ref": "#/$defs/opening"}},
+        "surfaces": {"type": "array", "items": {"type": "object", "required": ["id", "type"]}},
+        "features": {"type": "array"},
+        "quality": {"type": "object"}
+      }
+    }
+  },
+  "properties": {
+    "schema_version": {"type": "string"},
+    "capture": {
+      "type": "object",
+      "required": ["id", "tier", "source", "depth_source", "pose_source", "drift_correction", "synthetic"],
+      "properties": {
+        "tier": {"enum": ["lidar", "video", "photo"]},
+        "synthetic": {"type": "boolean"}
+      }
+    },
+    "confidence_level": {"type": "number"},
+    "calibration": {"type": "object", "required": ["status"]},
+    "rooms": {"type": "array", "items": {"$ref": "#/$defs/room"}},
+    "adjacency": {"type": "array", "items": {"type": "object", "required": ["a", "b", "via"]}},
+    "stitched_plan": {
+      "type": "object",
+      "required": ["footprint_area", "n_rooms", "method", "overlaps", "unresolved_rooms"],
+      "properties": {"footprint_area": {"$ref": "#/$defs/measure"}}
+    },
+    "damage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "surface_id", "class", "bbox_surface", "extent_w", "extent_h", "area", "confidence"],
+        "properties": {
+          "class": {"enum": ["water_stain", "mold", "crack"]},
+          "extent_w": {"$ref": "#/$defs/measure"}, "extent_h": {"$ref": "#/$defs/measure"},
+          "area": {"$ref": "#/$defs/measure"}
+        }
+      }
+    },
+    "concealed_damage_flags": {
+      "type": "array",
+      "items": {"type": "object", "required": ["id", "rule_id", "rule", "surface_id", "damage_ids", "severity"]}
+    },
+    "scope": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "code", "description", "surface_id", "unit", "quantity", "basis"],
+        "properties": {"quantity": {"$ref": "#/$defs/measure"}}
+      }
+    },
+    "warnings": {"type": "array", "items": {"type": "string"}},
+    "timing": {"type": "object"}
+  }
+}

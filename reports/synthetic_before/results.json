@@ -1,0 +1,3360 @@
+{
+ "manifest": "/Users/ramkrishnabirla/Desktop/property-scan/data/synthetic/apartment_a/manifest.yaml",
+ "synthetic": true,
+ "generated": "2026-10-04 23:23:20",
+ "config_calibration": "prior",
+ "gates": [
+  {
+   "gate": "opening_width",
+   "tier": "lidar",
+   "value": 0.0,
+   "threshold": ">= 85% within 2 cm",
+   "detail": "0 hits / (14 GT + 0 phantom)",
+   "pass": false
+  },
+  {
+   "gate": "ceiling_height",
+   "tier": "lidar",
+   "value": 0.0035000000000002807,
+   "threshold": "<= 1.5 cm every room",
+   "detail": "6/6 rooms within 1.5 cm",
+   "pass": true
+  },
+  {
+   "gate": "wall_length",
+   "tier": "lidar",
+   "value": 0.9615384615384616,
+   "threshold": ">= 90% of GT walls within \u00b11% (own target)",
+   "detail": "25/26 (missed walls count as failures: 0)",
+   "pass": true
+  },
+  {
+   "gate": "calibration",
+   "tier": "lidar",
+   "value": 0.7818181818181819,
+   "threshold": "90% intervals cover 80-97% of truths",
+   "detail": "43/55 measurements covered",
+   "pass": false
+  },
+  {
+   "gate": "opening_width",
+   "tier": "photo",
+   "value": 0.0,
+   "threshold": ">= 85% within 2 cm",
+   "detail": "0 hits / (14 GT + 3 phantom)",
+   "pass": false
+  },
+  {
+   "gate": "ceiling_height",
+   "tier": "photo",
+   "value": 0.1882999999999999,
+   "threshold": "<= 1.5 cm every room",
+   "detail": "0/6 rooms within 1.5 cm",
+   "pass": false
+  },
+  {
+   "gate": "wall_length",
+   "tier": "photo",
+   "value": 0.4230769230769231,
+   "threshold": ">= 90% of GT walls within \u00b18%",
+   "detail": "11/26 (missed walls count as failures: 5)",
+   "pass": false
+  },
+  {
+   "gate": "calibration",
+   "tier": "photo",
+   "value": 0.4634146341463415,
+   "threshold": "90% intervals cover 80-97% of truths",
+   "detail": "19/41 measurements covered",
+   "pass": false
+  },
+  {
+   "gate": "photo_stitch",
+   "tier": "photo",
+   "value": 0.2019196378674419,
+   "threshold": "footprint \u00b18%, correct adjacency, no overlaps, all rooms placed",
+   "detail": "photo_full: footprint 43.01 vs 35.79 m2, overlaps 0, unresolved ['kitchen', 'bedroom', 'hall'], adjacency wrong",
+   "pass": false
+  },
+  {
+   "gate": "opening_width",
+   "tier": "video",
+   "value": 0.0,
+   "threshold": ">= 85% within 2 cm",
+   "detail": "0 hits / (10 GT + 5 phantom)",
+   "pass": false
+  },
+  {
+   "gate": "ceiling_height",
+   "tier": "video",
+   "value": 0.03849999999999998,
+   "threshold": "<= 1.5 cm every room",
+   "detail": "1/3 rooms within 1.5 cm",
+   "pass": false
+  },
+  {
+   "gate": "wall_length",
+   "tier": "video",
+   "value": 0.3888888888888889,
+   "threshold": ">= 90% of GT walls within \u00b13%",
+   "detail": "7/18 (missed walls count as failures: 6)",
+   "pass": false
+  },
+  {
+   "gate": "calibration",
+   "tier": "video",
+   "value": 0.6521739130434783,
+   "threshold": "90% intervals cover 80-97% of truths",
+   "detail": "15/23 measurements covered",
+   "pass": false
+  },
+  {
+   "gate": "repeatability",
+   "tier": "lidar",
+   "value": 0.004100000000000215,
+   "threshold": "every wall within max(1 cm, 0.5%) across captures",
+   "detail": "bedroom-lidar: 4/4 walls",
+   "rows": [
+    {
+     "wall": "bedroom/0",
+     "gt": 3.2,
+     "preds": [
+      3.2009,
+      3.2024
+     ],
+     "spread": 0.0015000000000000568,
+     "tol": 0.016,
+     "pass": true
+    },
+    {
+     "wall": "bedroom/1",
+     "gt": 2.4999999999999996,
+     "preds": [
+      2.4947,
+      2.4988
+     ],
+     "spread": 0.004100000000000215,
+     "tol": 0.012499999999999997,
+     "pass": true
+    },
+    {
+     "wall": "bedroom/2",
+     "gt": 3.2,
+     "preds": [
+      3.2009,
+      3.2024
+     ],
+     "spread": 0.0015000000000000568,
+     "tol": 0.016,
+     "pass": true
+    },
+    {
+     "wall": "bedroom/3",
+     "gt": 2.4999999999999996,
+     "preds": [
+      2.4947,
+      2.4988
+     ],
+     "spread": 0.004100000000000215,
+     "tol": 0.012499999999999997,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "gate": "ceiling_spread",
+   "tier": "lidar",
+   "value": 0.0033000000000003027,
+   "threshold": "spread <= 1 cm and |bias| <= 1.5 cm",
+   "detail": "bedroom-lidar/bedroom: spread 0.33 cm, bias -0.19 cm -> repeatable and accurate",
+   "verdict": "repeatable and accurate",
+   "pass": true
+  },
+  {
+   "gate": "repeatability",
+   "tier": "photo",
+   "value": 0.07319999999999993,
+   "threshold": "every wall within max(1 cm, 0.5%) across captures",
+   "detail": "bedroom-photo: 1/3 walls",
+   "rows": [
+    {
+     "wall": "bedroom/0",
+     "gt": 3.2,
+     "preds": [
+      2.4791,
+      2.5523
+     ],
+     "spread": 0.07319999999999993,
+     "tol": 0.016,
+     "pass": false
+    },
+    {
+     "wall": "bedroom/1",
+     "gt": 2.4999999999999996,
+     "preds": [
+      2.4446,
+      2.4045
+     ],
+     "spread": 0.0400999999999998,
+     "tol": 0.012499999999999997,
+     "pass": false
+    },
+    {
+     "wall": "bedroom/2",
+     "gt": 3.2,
+     "preds": [
+      3.1092,
+      3.1059
+     ],
+     "spread": 0.0032999999999998586,
+     "tol": 0.016,
+     "pass": true
+    }
+   ],
+   "pass": false
+  },
+  {
+   "gate": "ceiling_spread",
+   "tier": "photo",
+   "value": 0.047399999999999665,
+   "threshold": "spread <= 1 cm and |bias| <= 1.5 cm",
+   "detail": "bedroom-photo/bedroom: spread 4.74 cm, bias -8.78 cm -> unrepeatable",
+   "verdict": "unrepeatable",
+   "pass": false
+  },
+  {
+   "gate": "drift_accountability",
+   "tier": "lidar",
+   "value": 0.005122222222222213,
+   "threshold": "drift handled (pose graph) + on/off ablation; on must not be worse",
+   "detail": "lidar_full: wall MAE 0.5 cm on vs 4.2 cm off; footprint err +0.2% on vs +3.6% off; 7 loop closures",
+   "pass": true
+  },
+  {
+   "gate": "drift_accountability",
+   "tier": "video",
+   "value": 0.3642583333333335,
+   "threshold": "drift handled (pose graph) + on/off ablation; on must not be worse",
+   "detail": "video_full: wall MAE 36.4 cm on vs 28.3 cm off; footprint err -0.5% on vs -0.5% off; 5 loop closures",
+   "pass": false
+  }
+ ],
+ "scores": [
+  {
+   "capture": "lidar_full",
+   "tier": "lidar",
+   "records": [
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "floor_area",
+     "room": "bedroom",
+     "pred": 7.9879,
+     "gt": 7.999999999999999,
+     "err": -0.012099999999999334,
+     "sigma": 0.02476,
+     "lo": 7.9472,
+     "hi": 8.0286,
+     "covered": true,
+     "iou": 0.998
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "ceiling_height",
+     "room": "bedroom",
+     "pred": 2.5805,
+     "gt": 2.58,
+     "err": 0.0004999999999997229,
+     "sigma": 0.00681,
+     "lo": 2.5693,
+     "hi": 2.5917,
+     "covered": true
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 2.4977,
+     "gt": 2.4999999999999996,
+     "err": -0.0022999999999995246,
+     "sigma": 0.00783,
+     "lo": 2.4849,
+     "hi": 2.5106,
+     "covered": true,
+     "gt_wall": "bedroom/1",
+     "observed_fraction": 0.961
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 3.1981,
+     "gt": 3.2,
+     "err": -0.0019000000000000128,
+     "sigma": 0.00892,
+     "lo": 3.1834,
+     "hi": 3.2127,
+     "covered": true,
+     "gt_wall": "bedroom/0",
+     "observed_fraction": 0.954
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 2.4977,
+     "gt": 2.4999999999999996,
+     "err": -0.0022999999999995246,
+     "sigma": 0.00783,
+     "lo": 2.4849,
+     "hi": 2.5106,
+     "covered": true,
+     "gt_wall": "bedroom/3",
+     "observed_fraction": 0.821
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 3.1981,
+     "gt": 3.2,
+     "err": -0.0019000000000000128,
+     "sigma": 0.00892,
+     "lo": 3.1834,
+     "hi": 3.2127,
+     "covered": true,
+     "gt_wall": "bedroom/2",
+     "observed_fraction": 0.969
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "opening_width",
+     "room": "bedroom",
+     "pred": 1.18,
+     "gt": 1.2,
+     "err": -0.020000000000000018,
+     "sigma": 0.01744,
+     "lo": 1.1513,
+     "hi": 1.2087,
+     "covered": true,
+     "type_pred": "window",
+     "type_gt": "window"
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "opening_width",
+     "room": "bedroom",
+     "pred": 0.76,
+     "gt": 0.8,
+     "err": -0.040000000000000036,
+     "sigma": 0.01735,
+     "lo": 0.7315,
+     "hi": 0.7885,
+     "covered": false,
+     "type_pred": "door",
+     "type_gt": "door"
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "floor_area",
+     "room": "living",
+     "pred": 17.1663,
+     "gt": 17.12,
+     "err": 0.046299999999998676,
+     "sigma": 0.03685,
+     "lo": 17.1057,
+     "hi": 17.2269,
+     "covered": true,
+     "iou": 0.997
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "ceiling_height",
+     "room": "living",
+     "pred": 2.6182,
+     "gt": 2.62,
+     "err": -0.0018000000000002458,
+     "sigma": 0.00695,
+     "lo": 2.6068,
+     "hi": 2.6296,
+     "covered": true
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 1.0024,
+     "gt": 0.9999999999999996,
+     "err": 0.002400000000000402,
+     "sigma": 0.00661,
+     "lo": 0.9915,
+     "hi": 1.0132,
+     "covered": true,
+     "gt_wall": "living/3",
+     "observed_fraction": 0.898
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 2.1841,
+     "gt": 2.2,
+     "err": -0.015900000000000247,
+     "sigma": 0.00748,
+     "lo": 2.1718,
+     "hi": 2.1964,
+     "covered": false,
+     "gt_wall": "living/2",
+     "observed_fraction": 0.961
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 3.5973,
+     "gt": 3.6,
+     "err": -0.0026999999999999247,
+     "sigma": 0.00961,
+     "lo": 3.5815,
+     "hi": 3.6131,
+     "covered": true,
+     "gt_wall": "living/1",
+     "observed_fraction": 0.973
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 4.2081,
+     "gt": 4.2,
+     "err": 0.008099999999999774,
+     "sigma": 0.01078,
+     "lo": 4.1903,
+     "hi": 4.2258,
+     "covered": true,
+     "gt_wall": "living/0",
+     "observed_fraction": 0.975
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 4.5997,
+     "gt": 4.6,
+     "err": -0.0002999999999993008,
+     "sigma": 0.01111,
+     "lo": 4.5814,
+     "hi": 4.6179,
+     "covered": true,
+     "gt_wall": "living/5",
+     "observed_fraction": 0.978
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 2.024,
+     "gt": 2.0,
+     "err": 0.02400000000000002,
+     "sigma": 0.00789,
+     "lo": 2.011,
+     "hi": 2.0369,
+     "covered": false,
+     "gt_wall": "living/4",
+     "observed_fraction": 0.939
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "opening_width",
+     "room": "living",
+     "pred": 0.88,
+     "gt": 0.9,
+     "err": -0.020000000000000018,
+     "sigma": 0.01737,
+     "lo": 0.8514,
+     "hi": 0.9086,
+     "covered": true,
+     "type_pred": "door",
+     "type_gt": "door"
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "opening_width",
+     "room": "living",
+     "pred": 1.36,
+     "gt": 1.4,
+     "err": -0.039999999999999813,
+     "sigma": 0.01749,
+     "lo": 1.3312,
+     "hi": 1.3888,
+     "covered": false,
+     "type_pred": "window",
+     "type_gt": "window"
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "opening_width",
+     "room": "living",
+     "pred": 0.98,
+     "gt": 1.0,
+     "err": -0.020000000000000018,
+     "sigma": 0.01739,
+     "lo": 0.9514,
+     "hi": 1.0086,
+     "covered": true,
+     "type_pred": "window",
+     "type_gt": "window"
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "floor_area",
+     "room": "hall",
+     "pred": 5.5455,
+     "gt": 5.519999999999996,
+     "err": 0.02550000000000363,
+     "sigma": 0.02829,
+     "lo": 5.4989,
+     "hi": 5.592,
+     "covered": true,
+     "iou": 0.995
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "ceiling_height",
+     "room": "hall",
+     "pred": 2.5971,
+     "gt": 2.6,
+     "err": -0.0028999999999999027,
+     "sigma": 0.00688,
+     "lo": 2.5857,
+     "hi": 2.6084,
+     "covered": true
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "hall",
+     "pred": 4.6075,
+     "gt": 4.6,
+     "err": 0.007500000000000284,
+     "sigma": 0.01109,
+     "lo": 4.5892,
+     "hi": 4.6257,
+     "covered": true,
+     "gt_wall": "hall/1",
+     "observed_fraction": 0.977
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "hall",
+     "pred": 1.2036,
+     "gt": 1.1999999999999993,
+     "err": 0.0036000000000007137,
+     "sigma": 0.00639,
+     "lo": 1.1931,
+     "hi": 1.2141,
+     "covered": true,
+     "gt_wall": "hall/0",
+     "observed_fraction": 0.914
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "hall",
+     "pred": 4.6075,
+     "gt": 4.6,
+     "err": 0.007500000000000284,
+     "sigma": 0.01109,
+     "lo": 4.5892,
+     "hi": 4.6257,
+     "covered": true,
+     "gt_wall": "hall/3",
+     "observed_fraction": 0.977
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "hall",
+     "pred": 1.2036,
+     "gt": 1.1999999999999993,
+     "err": 0.0036000000000007137,
+     "sigma": 0.00639,
+     "lo": 1.1931,
+     "hi": 1.2141,
+     "covered": true,
+     "gt_wall": "hall/2",
+     "observed_fraction": 0.914
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "opening_width",
+     "room": "hall",
+     "pred": 0.76,
+     "gt": 0.8,
+     "err": -0.040000000000000036,
+     "sigma": 0.01735,
+     "lo": 0.7315,
+     "hi": 0.7885,
+     "covered": false,
+     "type_pred": "door",
+     "type_gt": "door"
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "opening_width",
+     "room": "hall",
+     "pred": 0.82,
+     "gt": 0.85,
+     "err": -0.030000000000000027,
+     "sigma": 0.01736,
+     "lo": 0.7914,
+     "hi": 0.8486,
+     "covered": false,
+     "type_pred": "door",
+     "type_gt": "door"
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "opening_width",
+     "room": "hall",
+     "pred": 0.84,
+     "gt": 0.9,
+     "err": -0.06000000000000005,
+     "sigma": 0.01736,
+     "lo": 0.8114,
+     "hi": 0.8686,
+     "covered": false,
+     "type_pred": "door",
+     "type_gt": "door"
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "floor_area",
+     "room": "kitchen",
+     "pred": 5.1469,
+     "gt": 5.148000000000001,
+     "err": -0.001100000000000989,
+     "sigma": 0.01967,
+     "lo": 5.1145,
+     "hi": 5.1792,
+     "covered": true,
+     "iou": 0.998
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "ceiling_height",
+     "room": "kitchen",
+     "pred": 2.6019,
+     "gt": 2.6,
+     "err": 0.0019000000000000128,
+     "sigma": 0.00686,
+     "lo": 2.5907,
+     "hi": 2.6132,
+     "covered": true
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "kitchen",
+     "pred": 2.6021,
+     "gt": 2.6000000000000005,
+     "err": 0.0020999999999995467,
+     "sigma": 0.00803,
+     "lo": 2.5889,
+     "hi": 2.6153,
+     "covered": true,
+     "gt_wall": "kitchen/2",
+     "observed_fraction": 0.961
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "kitchen",
+     "pred": 1.978,
+     "gt": 1.98,
+     "err": -0.0020000000000000018,
+     "sigma": 0.00715,
+     "lo": 1.9662,
+     "hi": 1.9897,
+     "covered": true,
+     "gt_wall": "kitchen/1",
+     "observed_fraction": 0.935
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "kitchen",
+     "pred": 2.6021,
+     "gt": 2.6000000000000005,
+     "err": 0.0020999999999995467,
+     "sigma": 0.00803,
+     "lo": 2.5889,
+     "hi": 2.6153,
+     "covered": true,
+     "gt_wall": "kitchen/0",
+     "observed_fraction": 0.961
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "kitchen",
+     "pred": 1.978,
+     "gt": 1.98,
+     "err": -0.0020000000000000018,
+     "sigma": 0.00715,
+     "lo": 1.9662,
+     "hi": 1.9897,
+     "covered": true,
+     "gt_wall": "kitchen/3",
+     "observed_fraction": 0.935
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "opening_width",
+     "room": "kitchen",
+     "pred": 0.96,
+     "gt": 1.0,
+     "err": -0.040000000000000036,
+     "sigma": 0.01739,
+     "lo": 0.9314,
+     "hi": 0.9886,
+     "covered": false,
+     "type_pred": "window",
+     "type_gt": "window"
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "opening_width",
+     "room": "kitchen",
+     "pred": 0.82,
+     "gt": 0.85,
+     "err": -0.030000000000000027,
+     "sigma": 0.01736,
+     "lo": 0.7914,
+     "hi": 0.8486,
+     "covered": false,
+     "type_pred": "door",
+     "type_gt": "door"
+    },
+    {
+     "capture": "lidar_full",
+     "tier": "lidar",
+     "kind": "footprint_area",
+     "room": "*",
+     "pred": 35.8466,
+     "gt": 35.78799999999999,
+     "err": 0.05860000000001264,
+     "sigma": 0.0562,
+     "lo": 35.7541,
+     "hi": 35.939,
+     "covered": true
+    }
+   ],
+   "room_matches": [
+    {
+     "pred": "room_0",
+     "gt": "bedroom",
+     "iou": 0.998
+    },
+    {
+     "pred": "room_1",
+     "gt": "living",
+     "iou": 0.997
+    },
+    {
+     "pred": "room_2",
+     "gt": "hall",
+     "iou": 0.995
+    },
+    {
+     "pred": "room_3",
+     "gt": "kitchen",
+     "iou": 0.998
+    }
+   ],
+   "rooms_unmatched_pred": [],
+   "rooms_missed": [],
+   "walls_missed": [],
+   "walls_phantom": [],
+   "openings": {
+    "rows": [
+     {
+      "room": "bedroom",
+      "type": "window",
+      "gt": 1.2,
+      "pred": 1.18,
+      "err_cm": -2.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "bedroom",
+      "type": "door",
+      "gt": 0.8,
+      "pred": 0.76,
+      "err_cm": -4.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "living",
+      "type": "door",
+      "gt": 0.9,
+      "pred": 0.88,
+      "err_cm": -2.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "living",
+      "type": "window",
+      "gt": 1.4,
+      "pred": 1.36,
+      "err_cm": -4.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "living",
+      "type": "window",
+      "gt": 1.0,
+      "pred": 0.98,
+      "err_cm": -2.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "hall",
+      "type": "door",
+      "gt": 0.8,
+      "pred": 0.76,
+      "err_cm": -4.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "hall",
+      "type": "door",
+      "gt": 0.85,
+      "pred": 0.82,
+      "err_cm": -3.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "hall",
+      "type": "door",
+      "gt": 0.9,
+      "pred": 0.84,
+      "err_cm": -6.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "kitchen",
+      "type": "window",
+      "gt": 1.0,
+      "pred": 0.96,
+      "err_cm": -4.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "kitchen",
+      "type": "door",
+      "gt": 0.85,
+      "pred": 0.82,
+      "err_cm": -3.0,
+      "hit": false,
+      "type_ok": true
+     }
+    ],
+    "hits": 0,
+    "missed": [],
+    "phantom": [],
+    "n_gt": 10
+   },
+   "stitch": {
+    "gt_area": 35.788,
+    "pred_area": 35.8466,
+    "rel_err": 0.0016374203643682982,
+    "covered": true,
+    "overlaps": [],
+    "unresolved": [],
+    "adjacency_gt": [
+     [
+      "bedroom",
+      "hall"
+     ],
+     [
+      "hall",
+      "kitchen"
+     ],
+     [
+      "hall",
+      "living"
+     ]
+    ],
+    "adjacency_pred": [
+     [
+      "bedroom",
+      "hall"
+     ],
+     [
+      "hall",
+      "kitchen"
+     ],
+     [
+      "hall",
+      "living"
+     ]
+    ],
+    "adjacency_correct": true,
+    "rooms_gt": 4,
+    "rooms_pred": 4,
+    "rooms_matched": 4
+   },
+   "damage": {
+    "tp": [
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "wall",
+      "gt_size": [
+       0.5,
+       0.4
+      ],
+      "pred_size": [
+       0.5,
+       0.38
+      ]
+     },
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "ceiling",
+      "gt_size": [
+       0.55,
+       0.45
+      ],
+      "pred_size": [
+       0.12,
+       0.1
+      ]
+     }
+    ],
+    "fp": [
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "ceiling"
+     },
+     {
+      "room": "living",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "living",
+      "class": "mold",
+      "surface": "wall"
+     }
+    ],
+    "fn": [
+     {
+      "room": "bedroom",
+      "class": "mold",
+      "surface": "wall",
+      "size": [
+       0.4,
+       0.35
+      ]
+     },
+     {
+      "room": "living",
+      "class": "crack",
+      "surface": "wall",
+      "size": [
+       0.6,
+       0.02
+      ]
+     }
+    ],
+    "recall": 0.5,
+    "precision": 0.4
+   },
+   "timing": {
+    "ingest": 0.62,
+    "drift": 20.23,
+    "structure": 14.22,
+    "damage+scope": 30.52,
+    "total": 65.6
+   },
+   "drift": {
+    "applied": true,
+    "method": "SE2 pose graph: odometry + ICP loop closures + Manhattan yaw priors",
+    "keyframes": 185,
+    "loop_candidates": 45,
+    "loop_closures": 7,
+    "manhattan_priors": 185,
+    "max_correction_m": 0.21555774625908014,
+    "mean_correction_m": 0.1053377602442163,
+    "max_yaw_correction_deg": 2.286157063918417,
+    "final_cost": 13.246098960897385
+   },
+   "warnings": [
+    "intervals use error-budget priors (no benchmark calibration found in configs/calibration.json)",
+    "room_0: mirror detected (reflection agreement 0.50); phantom geometry removed"
+   ]
+  },
+  {
+   "capture": "lidar_bedroom_r1",
+   "tier": "lidar",
+   "records": [
+    {
+     "capture": "lidar_bedroom_r1",
+     "tier": "lidar",
+     "kind": "floor_area",
+     "room": "bedroom",
+     "pred": 7.9852,
+     "gt": 7.999999999999999,
+     "err": -0.014799999999999258,
+     "sigma": 0.02486,
+     "lo": 7.9443,
+     "hi": 8.0261,
+     "covered": true,
+     "iou": 0.998
+    },
+    {
+     "capture": "lidar_bedroom_r1",
+     "tier": "lidar",
+     "kind": "ceiling_height",
+     "room": "bedroom",
+     "pred": 2.5765,
+     "gt": 2.58,
+     "err": -0.0035000000000002807,
+     "sigma": 0.00684,
+     "lo": 2.5652,
+     "hi": 2.5877,
+     "covered": true
+    },
+    {
+     "capture": "lidar_bedroom_r1",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 2.4947,
+     "gt": 2.4999999999999996,
+     "err": -0.005299999999999638,
+     "sigma": 0.00789,
+     "lo": 2.4817,
+     "hi": 2.5076,
+     "covered": true,
+     "gt_wall": "bedroom/1",
+     "observed_fraction": 0.962
+    },
+    {
+     "capture": "lidar_bedroom_r1",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 3.2009,
+     "gt": 3.2,
+     "err": 0.0008999999999996788,
+     "sigma": 0.00888,
+     "lo": 3.1863,
+     "hi": 3.2155,
+     "covered": true,
+     "gt_wall": "bedroom/0",
+     "observed_fraction": 0.968
+    },
+    {
+     "capture": "lidar_bedroom_r1",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 2.4947,
+     "gt": 2.4999999999999996,
+     "err": -0.005299999999999638,
+     "sigma": 0.00789,
+     "lo": 2.4817,
+     "hi": 2.5076,
+     "covered": true,
+     "gt_wall": "bedroom/3",
+     "observed_fraction": 0.962
+    },
+    {
+     "capture": "lidar_bedroom_r1",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 3.2009,
+     "gt": 3.2,
+     "err": 0.0008999999999996788,
+     "sigma": 0.00888,
+     "lo": 3.1863,
+     "hi": 3.2155,
+     "covered": true,
+     "gt_wall": "bedroom/2",
+     "observed_fraction": 0.968
+    },
+    {
+     "capture": "lidar_bedroom_r1",
+     "tier": "lidar",
+     "kind": "opening_width",
+     "room": "bedroom",
+     "pred": 1.18,
+     "gt": 1.2,
+     "err": -0.020000000000000018,
+     "sigma": 0.01744,
+     "lo": 1.1513,
+     "hi": 1.2087,
+     "covered": true,
+     "type_pred": "window",
+     "type_gt": "window"
+    },
+    {
+     "capture": "lidar_bedroom_r1",
+     "tier": "lidar",
+     "kind": "opening_width",
+     "room": "bedroom",
+     "pred": 0.76,
+     "gt": 0.8,
+     "err": -0.040000000000000036,
+     "sigma": 0.01735,
+     "lo": 0.7315,
+     "hi": 0.7885,
+     "covered": false,
+     "type_pred": "door",
+     "type_gt": "door"
+    },
+    {
+     "capture": "lidar_bedroom_r1",
+     "tier": "lidar",
+     "kind": "footprint_area",
+     "room": "*",
+     "pred": 7.9852,
+     "gt": 7.999999999999999,
+     "err": -0.014799999999999258,
+     "sigma": 0.02486,
+     "lo": 7.9443,
+     "hi": 8.0261,
+     "covered": true
+    }
+   ],
+   "room_matches": [
+    {
+     "pred": "room_0",
+     "gt": "bedroom",
+     "iou": 0.998
+    }
+   ],
+   "rooms_unmatched_pred": [],
+   "rooms_missed": [],
+   "walls_missed": [],
+   "walls_phantom": [],
+   "openings": {
+    "rows": [
+     {
+      "room": "bedroom",
+      "type": "window",
+      "gt": 1.2,
+      "pred": 1.18,
+      "err_cm": -2.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "bedroom",
+      "type": "door",
+      "gt": 0.8,
+      "pred": 0.76,
+      "err_cm": -4.0,
+      "hit": false,
+      "type_ok": true
+     }
+    ],
+    "hits": 0,
+    "missed": [],
+    "phantom": [],
+    "n_gt": 2
+   },
+   "stitch": {
+    "gt_area": 8.0,
+    "pred_area": 7.9852,
+    "rel_err": -0.0018499999999999075,
+    "covered": true,
+    "overlaps": [],
+    "unresolved": [],
+    "adjacency_gt": [],
+    "adjacency_pred": [],
+    "adjacency_correct": true,
+    "rooms_gt": 1,
+    "rooms_pred": 1,
+    "rooms_matched": 1
+   },
+   "damage": {
+    "tp": [
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "wall",
+      "gt_size": [
+       0.5,
+       0.4
+      ],
+      "pred_size": [
+       0.48,
+       0.38
+      ]
+     }
+    ],
+    "fp": [],
+    "fn": [
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "ceiling",
+      "size": [
+       0.55,
+       0.45
+      ]
+     },
+     {
+      "room": "bedroom",
+      "class": "mold",
+      "surface": "wall",
+      "size": [
+       0.4,
+       0.35
+      ]
+     }
+    ],
+    "recall": 0.3333333333333333,
+    "precision": 1.0
+   },
+   "timing": {
+    "ingest": 0.15,
+    "drift": 2.23,
+    "structure": 2.61,
+    "damage+scope": 6.61,
+    "total": 11.59
+   },
+   "drift": {
+    "applied": true,
+    "method": "SE2 pose graph: odometry + ICP loop closures + Manhattan yaw priors",
+    "keyframes": 42,
+    "loop_candidates": 14,
+    "loop_closures": 4,
+    "manhattan_priors": 42,
+    "max_correction_m": 0.0036146132415671097,
+    "mean_correction_m": 0.0013307243141408363,
+    "max_yaw_correction_deg": 0.5009712423521262,
+    "final_cost": 1.7548081174225214
+   },
+   "warnings": [
+    "intervals use error-budget priors (no benchmark calibration found in configs/calibration.json)",
+    "room_0: mirror detected (reflection agreement 0.50); phantom geometry removed"
+   ]
+  },
+  {
+   "capture": "lidar_bedroom_r2",
+   "tier": "lidar",
+   "records": [
+    {
+     "capture": "lidar_bedroom_r2",
+     "tier": "lidar",
+     "kind": "floor_area",
+     "room": "bedroom",
+     "pred": 8.0023,
+     "gt": 7.999999999999999,
+     "err": 0.002300000000000857,
+     "sigma": 0.02522,
+     "lo": 7.9608,
+     "hi": 8.0437,
+     "covered": true,
+     "iou": 0.999
+    },
+    {
+     "capture": "lidar_bedroom_r2",
+     "tier": "lidar",
+     "kind": "ceiling_height",
+     "room": "bedroom",
+     "pred": 2.5798,
+     "gt": 2.58,
+     "err": -0.00019999999999997797,
+     "sigma": 0.00683,
+     "lo": 2.5686,
+     "hi": 2.5911,
+     "covered": true
+    },
+    {
+     "capture": "lidar_bedroom_r2",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 3.2024,
+     "gt": 3.2,
+     "err": 0.0023999999999997357,
+     "sigma": 0.00905,
+     "lo": 3.1875,
+     "hi": 3.2173,
+     "covered": true,
+     "gt_wall": "bedroom/2",
+     "observed_fraction": 0.968
+    },
+    {
+     "capture": "lidar_bedroom_r2",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 2.4988,
+     "gt": 2.4999999999999996,
+     "err": -0.0011999999999994237,
+     "sigma": 0.00788,
+     "lo": 2.4859,
+     "hi": 2.5118,
+     "covered": true,
+     "gt_wall": "bedroom/1",
+     "observed_fraction": 0.96
+    },
+    {
+     "capture": "lidar_bedroom_r2",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 3.2024,
+     "gt": 3.2,
+     "err": 0.0023999999999997357,
+     "sigma": 0.00905,
+     "lo": 3.1875,
+     "hi": 3.2173,
+     "covered": true,
+     "gt_wall": "bedroom/0",
+     "observed_fraction": 0.968
+    },
+    {
+     "capture": "lidar_bedroom_r2",
+     "tier": "lidar",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 2.4988,
+     "gt": 2.4999999999999996,
+     "err": -0.0011999999999994237,
+     "sigma": 0.00788,
+     "lo": 2.4859,
+     "hi": 2.5118,
+     "covered": true,
+     "gt_wall": "bedroom/3",
+     "observed_fraction": 0.96
+    },
+    {
+     "capture": "lidar_bedroom_r2",
+     "tier": "lidar",
+     "kind": "opening_width",
+     "room": "bedroom",
+     "pred": 1.16,
+     "gt": 1.2,
+     "err": -0.040000000000000036,
+     "sigma": 0.01744,
+     "lo": 1.1313,
+     "hi": 1.1887,
+     "covered": false,
+     "type_pred": "window",
+     "type_gt": "window"
+    },
+    {
+     "capture": "lidar_bedroom_r2",
+     "tier": "lidar",
+     "kind": "opening_width",
+     "room": "bedroom",
+     "pred": 0.78,
+     "gt": 0.8,
+     "err": -0.020000000000000018,
+     "sigma": 0.01735,
+     "lo": 0.7515,
+     "hi": 0.8085,
+     "covered": true,
+     "type_pred": "door",
+     "type_gt": "door"
+    },
+    {
+     "capture": "lidar_bedroom_r2",
+     "tier": "lidar",
+     "kind": "footprint_area",
+     "room": "*",
+     "pred": 10.2027,
+     "gt": 7.999999999999999,
+     "err": 2.202700000000001,
+     "sigma": 0.09386,
+     "lo": 10.0483,
+     "hi": 10.3571,
+     "covered": false
+    }
+   ],
+   "room_matches": [
+    {
+     "pred": "room_0",
+     "gt": "bedroom",
+     "iou": 0.999
+    }
+   ],
+   "rooms_unmatched_pred": [
+    "room_1"
+   ],
+   "rooms_missed": [],
+   "walls_missed": [],
+   "walls_phantom": [],
+   "openings": {
+    "rows": [
+     {
+      "room": "bedroom",
+      "type": "window",
+      "gt": 1.2,
+      "pred": 1.16,
+      "err_cm": -4.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "bedroom",
+      "type": "door",
+      "gt": 0.8,
+      "pred": 0.78,
+      "err_cm": -2.0,
+      "hit": false,
+      "type_ok": true
+     }
+    ],
+    "hits": 0,
+    "missed": [],
+    "phantom": [],
+    "n_gt": 2
+   },
+   "stitch": {
+    "gt_area": 8.0,
+    "pred_area": 10.2027,
+    "rel_err": 0.2753375000000002,
+    "covered": false,
+    "overlaps": [],
+    "unresolved": [],
+    "adjacency_gt": [],
+    "adjacency_pred": [
+     [
+      "?room_1",
+      "bedroom"
+     ]
+    ],
+    "adjacency_correct": false,
+    "rooms_gt": 1,
+    "rooms_pred": 2,
+    "rooms_matched": 1
+   },
+   "damage": {
+    "tp": [
+     {
+      "room": "bedroom",
+      "class": "mold",
+      "surface": "wall",
+      "gt_size": [
+       0.4,
+       0.35
+      ],
+      "pred_size": [
+       0.22,
+       0.12
+      ]
+     },
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "wall",
+      "gt_size": [
+       0.5,
+       0.4
+      ],
+      "pred_size": [
+       0.48,
+       0.4
+      ]
+     }
+    ],
+    "fp": [],
+    "fn": [
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "ceiling",
+      "size": [
+       0.55,
+       0.45
+      ]
+     }
+    ],
+    "recall": 0.6666666666666666,
+    "precision": 1.0
+   },
+   "timing": {
+    "ingest": 0.14,
+    "drift": 2.71,
+    "structure": 2.32,
+    "damage+scope": 9.69,
+    "total": 14.86
+   },
+   "drift": {
+    "applied": true,
+    "method": "SE2 pose graph: odometry + ICP loop closures + Manhattan yaw priors",
+    "keyframes": 44,
+    "loop_candidates": 16,
+    "loop_closures": 0,
+    "manhattan_priors": 44,
+    "max_correction_m": 0.0018288246059144611,
+    "mean_correction_m": 0.0006064328385487879,
+    "max_yaw_correction_deg": 0.19608928779182247,
+    "final_cost": 0.9095885873726985
+   },
+   "warnings": [
+    "intervals use error-budget priors (no benchmark calibration found in configs/calibration.json)",
+    "room_0: mirror detected (reflection agreement 0.49); phantom geometry removed",
+    "room_1/wall_1: wall plane barely observed (0 points); position from footprint, interval widened",
+    "room_1/wall_2: wall plane barely observed (0 points); position from footprint, interval widened",
+    "room_1/wall_3: wall plane barely observed (0 points); position from footprint, interval widened"
+   ]
+  },
+  {
+   "capture": "video_full",
+   "tier": "video",
+   "records": [
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "floor_area",
+     "room": "living",
+     "pred": 16.9719,
+     "gt": 17.12,
+     "err": -0.14809999999999945,
+     "sigma": 0.10497,
+     "lo": 16.7992,
+     "hi": 17.1445,
+     "covered": true,
+     "iou": 0.954
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "ceiling_height",
+     "room": "living",
+     "pred": 2.6012,
+     "gt": 2.62,
+     "err": -0.01880000000000015,
+     "sigma": 0.06714,
+     "lo": 2.4908,
+     "hi": 2.7117,
+     "covered": true
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 4.4602,
+     "gt": 4.6,
+     "err": -0.13979999999999926,
+     "sigma": 0.11319,
+     "lo": 4.274,
+     "hi": 4.6463,
+     "covered": true,
+     "gt_wall": "living/5",
+     "observed_fraction": 0.975
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 2.3759,
+     "gt": 2.0,
+     "err": 0.3759000000000001,
+     "sigma": 0.06242,
+     "lo": 2.2733,
+     "hi": 2.4786,
+     "covered": false,
+     "gt_wall": "living/4",
+     "observed_fraction": 0.921
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 1.8007,
+     "gt": 2.2,
+     "err": -0.3993000000000002,
+     "sigma": 0.04889,
+     "lo": 1.7203,
+     "hi": 1.8811,
+     "covered": false,
+     "gt_wall": "living/2",
+     "observed_fraction": 0.944
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 3.5402,
+     "gt": 3.6,
+     "err": -0.059800000000000075,
+     "sigma": 0.09065,
+     "lo": 3.3911,
+     "hi": 3.6893,
+     "covered": true,
+     "gt_wall": "living/1",
+     "observed_fraction": 0.975
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 4.1766,
+     "gt": 4.2,
+     "err": -0.02340000000000053,
+     "sigma": 0.10614,
+     "lo": 4.0021,
+     "hi": 4.3512,
+     "covered": true,
+     "gt_wall": "living/0",
+     "observed_fraction": 0.97
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "opening_width",
+     "room": "living",
+     "pred": 1.24,
+     "gt": 1.0,
+     "err": 0.24,
+     "sigma": 0.03893,
+     "lo": 1.176,
+     "hi": 1.304,
+     "covered": false,
+     "type_pred": "window",
+     "type_gt": "window"
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "opening_width",
+     "room": "living",
+     "pred": 0.86,
+     "gt": 0.9,
+     "err": -0.040000000000000036,
+     "sigma": 0.03189,
+     "lo": 0.8075,
+     "hi": 0.9125,
+     "covered": true,
+     "type_pred": "door",
+     "type_gt": "door"
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "floor_area",
+     "room": "bedroom",
+     "pred": 13.6178,
+     "gt": 7.999999999999999,
+     "err": 5.617800000000002,
+     "sigma": 0.10476,
+     "lo": 13.4455,
+     "hi": 13.7901,
+     "covered": false,
+     "iou": 0.58
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "ceiling_height",
+     "room": "bedroom",
+     "pred": 2.5667,
+     "gt": 2.58,
+     "err": -0.01330000000000009,
+     "sigma": 0.06623,
+     "lo": 2.4577,
+     "hi": 2.6756,
+     "covered": true
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 4.4881,
+     "gt": 2.4999999999999996,
+     "err": 1.9881000000000006,
+     "sigma": 0.11376,
+     "lo": 4.301,
+     "hi": 4.6752,
+     "covered": false,
+     "gt_wall": "bedroom/3",
+     "observed_fraction": 0.969
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 4.4654,
+     "gt": 3.2,
+     "err": 1.2653999999999996,
+     "sigma": 0.11321,
+     "lo": 4.2792,
+     "hi": 4.6516,
+     "covered": false,
+     "gt_wall": "bedroom/2",
+     "observed_fraction": 0.974
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 3.1748,
+     "gt": 3.2,
+     "err": -0.025200000000000333,
+     "sigma": 0.08154,
+     "lo": 3.0407,
+     "hi": 3.3089,
+     "covered": true,
+     "gt_wall": "bedroom/0",
+     "observed_fraction": 0.961
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "floor_area",
+     "room": "kitchen",
+     "pred": 5.0364,
+     "gt": 5.148000000000001,
+     "err": -0.11160000000000014,
+     "sigma": 0.06018,
+     "lo": 4.9374,
+     "hi": 5.1354,
+     "covered": false,
+     "iou": 0.978
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "ceiling_height",
+     "room": "kitchen",
+     "pred": 2.5615,
+     "gt": 2.6,
+     "err": -0.03849999999999998,
+     "sigma": 0.06615,
+     "lo": 2.4527,
+     "hi": 2.6703,
+     "covered": true
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "wall_length",
+     "room": "kitchen",
+     "pred": 2.5831,
+     "gt": 2.6000000000000005,
+     "err": -0.01690000000000058,
+     "sigma": 0.06722,
+     "lo": 2.4725,
+     "hi": 2.6936,
+     "covered": true,
+     "gt_wall": "kitchen/2",
+     "observed_fraction": 0.968
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "wall_length",
+     "room": "kitchen",
+     "pred": 1.9498,
+     "gt": 1.98,
+     "err": -0.030200000000000005,
+     "sigma": 0.05215,
+     "lo": 1.864,
+     "hi": 2.0356,
+     "covered": true,
+     "gt_wall": "kitchen/1",
+     "observed_fraction": 0.949
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "wall_length",
+     "room": "kitchen",
+     "pred": 2.5831,
+     "gt": 2.6000000000000005,
+     "err": -0.01690000000000058,
+     "sigma": 0.06722,
+     "lo": 2.4725,
+     "hi": 2.6936,
+     "covered": true,
+     "gt_wall": "kitchen/0",
+     "observed_fraction": 0.968
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "wall_length",
+     "room": "kitchen",
+     "pred": 1.9498,
+     "gt": 1.98,
+     "err": -0.030200000000000005,
+     "sigma": 0.05215,
+     "lo": 1.864,
+     "hi": 2.0356,
+     "covered": true,
+     "gt_wall": "kitchen/3",
+     "observed_fraction": 0.949
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "opening_width",
+     "room": "kitchen",
+     "pred": 1.14,
+     "gt": 1.0,
+     "err": 0.1399999999999999,
+     "sigma": 0.03697,
+     "lo": 1.0792,
+     "hi": 1.2008,
+     "covered": false,
+     "type_pred": "window",
+     "type_gt": "window"
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "opening_width",
+     "room": "kitchen",
+     "pred": 0.8,
+     "gt": 0.85,
+     "err": -0.04999999999999993,
+     "sigma": 0.0309,
+     "lo": 0.7492,
+     "hi": 0.8508,
+     "covered": true,
+     "type_pred": "door",
+     "type_gt": "door"
+    },
+    {
+     "capture": "video_full",
+     "tier": "video",
+     "kind": "footprint_area",
+     "room": "*",
+     "pred": 35.6261,
+     "gt": 35.78799999999999,
+     "err": -0.1618999999999886,
+     "sigma": 0.16004,
+     "lo": 35.3629,
+     "hi": 35.8894,
+     "covered": true
+    }
+   ],
+   "room_matches": [
+    {
+     "pred": "room_0",
+     "gt": "living",
+     "iou": 0.954
+    },
+    {
+     "pred": "room_1",
+     "gt": "bedroom",
+     "iou": 0.58
+    },
+    {
+     "pred": "room_2",
+     "gt": "kitchen",
+     "iou": 0.978
+    }
+   ],
+   "rooms_unmatched_pred": [],
+   "rooms_missed": [
+    "hall"
+   ],
+   "walls_missed": [
+    "living/3 (1.00 m)",
+    "bedroom/1 (2.50 m)",
+    "hall/0 (room missing)",
+    "hall/1 (room missing)",
+    "hall/2 (room missing)",
+    "hall/3 (room missing)"
+   ],
+   "walls_phantom": [
+    "living:room_0/wall_2",
+    "bedroom:room_1/wall_2",
+    "bedroom:room_1/wall_4",
+    "bedroom:room_1/wall_5"
+   ],
+   "openings": {
+    "rows": [
+     {
+      "room": "living",
+      "type": "window",
+      "gt": 1.0,
+      "pred": 1.24,
+      "err_cm": 24.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "living",
+      "type": "door",
+      "gt": 0.9,
+      "pred": 0.86,
+      "err_cm": -4.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "kitchen",
+      "type": "window",
+      "gt": 1.0,
+      "pred": 1.14,
+      "err_cm": 14.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "kitchen",
+      "type": "door",
+      "gt": 0.85,
+      "pred": 0.8,
+      "err_cm": -5.0,
+      "hit": false,
+      "type_ok": true
+     }
+    ],
+    "hits": 0,
+    "missed": [
+     "living:window 1.40",
+     "bedroom:door 0.80",
+     "bedroom:window 1.20",
+     "hall:door 0.90 (room missing)",
+     "hall:door 0.80 (room missing)",
+     "hall:door 0.85 (room missing)"
+    ],
+    "phantom": [
+     "living:room_0/opening_2 (door 1.52)",
+     "bedroom:room_1/opening_0 (door 0.86)",
+     "bedroom:room_1/opening_1 (window 1.08)",
+     "bedroom:room_1/opening_2 (window 1.24)",
+     "bedroom:room_1/opening_3 (door 0.82)"
+    ],
+    "n_gt": 10
+   },
+   "stitch": {
+    "gt_area": 35.788,
+    "pred_area": 35.6261,
+    "rel_err": -0.004523862747289277,
+    "covered": true,
+    "overlaps": [],
+    "unresolved": [],
+    "adjacency_gt": [
+     [
+      "bedroom",
+      "hall"
+     ],
+     [
+      "hall",
+      "kitchen"
+     ],
+     [
+      "hall",
+      "living"
+     ]
+    ],
+    "adjacency_pred": [
+     [
+      "bedroom",
+      "kitchen"
+     ],
+     [
+      "bedroom",
+      "living"
+     ]
+    ],
+    "adjacency_correct": false,
+    "rooms_gt": 4,
+    "rooms_pred": 3,
+    "rooms_matched": 3
+   },
+   "damage": {
+    "tp": [
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "ceiling",
+      "gt_size": [
+       0.55,
+       0.45
+      ],
+      "pred_size": [
+       0.33,
+       0.24
+      ]
+     },
+     {
+      "room": "bedroom",
+      "class": "mold",
+      "surface": "wall",
+      "gt_size": [
+       0.4,
+       0.35
+      ],
+      "pred_size": [
+       0.12,
+       0.21
+      ]
+     },
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "wall",
+      "gt_size": [
+       0.5,
+       0.4
+      ],
+      "pred_size": [
+       0.48,
+       0.39
+      ]
+     }
+    ],
+    "fp": [
+     {
+      "room": "kitchen",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "kitchen",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "living",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "living",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "living",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "bedroom",
+      "class": "mold",
+      "surface": "ceiling"
+     },
+     {
+      "room": "living",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "bedroom",
+      "class": "mold",
+      "surface": "ceiling"
+     },
+     {
+      "room": "living",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "bedroom",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "bedroom",
+      "class": "mold",
+      "surface": "ceiling"
+     },
+     {
+      "room": "living",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "bedroom",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "living",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "bedroom",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "bedroom",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "kitchen",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "ceiling"
+     },
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "wall"
+     },
+     {
+      "room": "kitchen",
+      "class": "crack",
+      "surface": "wall"
+     }
+    ],
+    "fn": [
+     {
+      "room": "living",
+      "class": "crack",
+      "surface": "wall",
+      "size": [
+       0.6,
+       0.02
+      ]
+     }
+    ],
+    "recall": 0.75,
+    "precision": 0.13043478260869565
+   },
+   "timing": {
+    "ingest+depth+odometry": 10.01,
+    "drift": 26.91,
+    "structure": 20.91,
+    "damage+scope": 9.17,
+    "total": 66.99
+   },
+   "drift": {
+    "applied": true,
+    "method": "SE2 pose graph: odometry + ICP loop closures + Manhattan yaw priors",
+    "keyframes": 235,
+    "loop_candidates": 45,
+    "loop_closures": 5,
+    "manhattan_priors": 178,
+    "max_correction_m": 0.286703293939625,
+    "mean_correction_m": 0.1860211866957173,
+    "max_yaw_correction_deg": 3.842010974507323,
+    "final_cost": 61.21349715984596
+   },
+   "warnings": [
+    "depth from synthetic sidecar (integration test data): not a real-world accuracy result",
+    "intervals use error-budget priors (no benchmark calibration found in configs/calibration.json)",
+    "room_1: mirror detected (reflection agreement 0.79); phantom geometry removed"
+   ]
+  },
+  {
+   "capture": "photo_full",
+   "tier": "photo",
+   "records": [
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "floor_area",
+     "room": "bedroom",
+     "pred": 9.5175,
+     "gt": 7.999999999999999,
+     "err": 1.517500000000001,
+     "sigma": 0.13192,
+     "lo": 9.3005,
+     "hi": 9.7345,
+     "covered": false,
+     "iou": 0.735
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "ceiling_height",
+     "room": "bedroom",
+     "pred": 2.4854,
+     "gt": 2.58,
+     "err": -0.09460000000000024,
+     "sigma": 0.12795,
+     "lo": 2.2749,
+     "hi": 2.6959,
+     "covered": true
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 2.5674,
+     "gt": 3.2,
+     "err": -0.6326,
+     "sigma": 0.13171,
+     "lo": 2.3507,
+     "hi": 2.784,
+     "covered": false,
+     "gt_wall": "bedroom/0",
+     "observed_fraction": 0.962
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 4.4316,
+     "gt": 3.2,
+     "err": 1.2316000000000003,
+     "sigma": 0.22354,
+     "lo": 4.0639,
+     "hi": 4.7993,
+     "covered": false,
+     "gt_wall": "bedroom/2",
+     "observed_fraction": 0.714
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 2.4703,
+     "gt": 2.4999999999999996,
+     "err": -0.029699999999999616,
+     "sigma": 0.12702,
+     "lo": 2.2614,
+     "hi": 2.6792,
+     "covered": true,
+     "gt_wall": "bedroom/1",
+     "observed_fraction": 0.951
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "opening_width",
+     "room": "bedroom",
+     "pred": 0.76,
+     "gt": 1.2,
+     "err": -0.43999999999999995,
+     "sigma": 0.05011,
+     "lo": 0.6776,
+     "hi": 0.8424,
+     "covered": false,
+     "type_pred": "window",
+     "type_gt": "window"
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "floor_area",
+     "room": "hall",
+     "pred": 4.2328,
+     "gt": 5.519999999999996,
+     "err": -1.287199999999996,
+     "sigma": 0.12533,
+     "lo": 4.0267,
+     "hi": 4.4389,
+     "covered": false,
+     "iou": 0.767
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "ceiling_height",
+     "room": "hall",
+     "pred": 2.4117,
+     "gt": 2.6,
+     "err": -0.1882999999999999,
+     "sigma": 0.1243,
+     "lo": 2.2072,
+     "hi": 2.6161,
+     "covered": true
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "hall",
+     "pred": 3.8844,
+     "gt": 4.6,
+     "err": -0.7155999999999998,
+     "sigma": 0.20164,
+     "lo": 3.5528,
+     "hi": 4.2161,
+     "covered": false,
+     "gt_wall": "hall/3",
+     "observed_fraction": 0.682
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "hall",
+     "pred": 1.0897,
+     "gt": 1.1999999999999993,
+     "err": -0.1102999999999994,
+     "sigma": 0.06147,
+     "lo": 0.9886,
+     "hi": 1.1908,
+     "covered": false,
+     "gt_wall": "hall/2",
+     "observed_fraction": 0.918
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "hall",
+     "pred": 3.8844,
+     "gt": 4.6,
+     "err": -0.7155999999999998,
+     "sigma": 0.20164,
+     "lo": 3.5528,
+     "hi": 4.2161,
+     "covered": false,
+     "gt_wall": "hall/1",
+     "observed_fraction": 0.579
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "floor_area",
+     "room": "kitchen",
+     "pred": 10.1151,
+     "gt": 5.148000000000001,
+     "err": 4.967099999999999,
+     "sigma": 0.27408,
+     "lo": 9.6643,
+     "hi": 10.5659,
+     "covered": false,
+     "iou": 0.509
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "ceiling_height",
+     "room": "kitchen",
+     "pred": 2.6398,
+     "gt": 2.6,
+     "err": 0.03980000000000006,
+     "sigma": 0.13551,
+     "lo": 2.4169,
+     "hi": 2.8627,
+     "covered": true
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "kitchen",
+     "pred": 2.6333,
+     "gt": 2.6000000000000005,
+     "err": 0.03329999999999966,
+     "sigma": 0.13506,
+     "lo": 2.4111,
+     "hi": 2.8554,
+     "covered": true,
+     "gt_wall": "kitchen/2",
+     "observed_fraction": 0.969
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "kitchen",
+     "pred": 2.0157,
+     "gt": 1.98,
+     "err": 0.03569999999999984,
+     "sigma": 0.10492,
+     "lo": 1.8431,
+     "hi": 2.1882,
+     "covered": true,
+     "gt_wall": "kitchen/1",
+     "observed_fraction": 0.943
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "kitchen",
+     "pred": 4.0055,
+     "gt": 2.6000000000000005,
+     "err": 1.405499999999999,
+     "sigma": 0.20257,
+     "lo": 3.6723,
+     "hi": 4.3387,
+     "covered": false,
+     "gt_wall": "kitchen/0",
+     "observed_fraction": 0.699
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "opening_width",
+     "room": "kitchen",
+     "pred": 0.84,
+     "gt": 1.0,
+     "err": -0.16000000000000003,
+     "sigma": 0.0532,
+     "lo": 0.7525,
+     "hi": 0.9275,
+     "covered": false,
+     "type_pred": "window",
+     "type_gt": "window"
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "floor_area",
+     "room": "living",
+     "pred": 19.1489,
+     "gt": 17.12,
+     "err": 2.0289,
+     "sigma": 0.21884,
+     "lo": 18.7889,
+     "hi": 19.5088,
+     "covered": false,
+     "iou": 0.792
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "ceiling_height",
+     "room": "living",
+     "pred": 2.5282,
+     "gt": 2.62,
+     "err": -0.0918000000000001,
+     "sigma": 0.13017,
+     "lo": 2.3141,
+     "hi": 2.7423,
+     "covered": true
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 1.8688,
+     "gt": 2.0,
+     "err": -0.13119999999999998,
+     "sigma": 0.09792,
+     "lo": 1.7077,
+     "hi": 2.0298,
+     "covered": true,
+     "gt_wall": "living/4",
+     "observed_fraction": 0.936
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 1.0319,
+     "gt": 0.9999999999999996,
+     "err": 0.031900000000000484,
+     "sigma": 0.05956,
+     "lo": 0.9339,
+     "hi": 1.1298,
+     "covered": true,
+     "gt_wall": "living/3",
+     "observed_fraction": 0.242
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 2.1154,
+     "gt": 2.2,
+     "err": -0.08460000000000001,
+     "sigma": 0.10975,
+     "lo": 1.9349,
+     "hi": 2.2959,
+     "covered": true,
+     "gt_wall": "living/2",
+     "observed_fraction": 0.945
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 1.8569,
+     "gt": 3.6,
+     "err": -1.7431,
+     "sigma": 0.09732,
+     "lo": 1.6968,
+     "hi": 2.017,
+     "covered": false,
+     "gt_wall": "living/1",
+     "observed_fraction": 0.942
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 7.3285,
+     "gt": 4.2,
+     "err": 3.1285,
+     "sigma": 0.37043,
+     "lo": 6.7192,
+     "hi": 7.9378,
+     "covered": false,
+     "gt_wall": "living/0",
+     "observed_fraction": 0.594
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "living",
+     "pred": 4.4852,
+     "gt": 4.6,
+     "err": -0.11479999999999979,
+     "sigma": 0.22626,
+     "lo": 4.113,
+     "hi": 4.8573,
+     "covered": true,
+     "gt_wall": "living/5",
+     "observed_fraction": 0.97
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "opening_width",
+     "room": "living",
+     "pred": 0.62,
+     "gt": 1.4,
+     "err": -0.7799999999999999,
+     "sigma": 0.04503,
+     "lo": 0.5459,
+     "hi": 0.6941,
+     "covered": false,
+     "type_pred": "window",
+     "type_gt": "window"
+    },
+    {
+     "capture": "photo_full",
+     "tier": "photo",
+     "kind": "footprint_area",
+     "room": "*",
+     "pred": 43.0143,
+     "gt": 35.78799999999999,
+     "err": 7.226300000000009,
+     "sigma": 0.39512,
+     "lo": 42.3644,
+     "hi": 43.6643,
+     "covered": false
+    }
+   ],
+   "room_matches": [
+    {
+     "pred": "bedroom",
+     "gt": "bedroom",
+     "iou": 0.735
+    },
+    {
+     "pred": "hall",
+     "gt": "hall",
+     "iou": 0.767
+    },
+    {
+     "pred": "kitchen",
+     "gt": "kitchen",
+     "iou": 0.509
+    },
+    {
+     "pred": "living",
+     "gt": "living",
+     "iou": 0.792
+    }
+   ],
+   "rooms_unmatched_pred": [],
+   "rooms_missed": [],
+   "walls_missed": [
+    "bedroom/3 (2.50 m)",
+    "hall/0 (1.20 m)",
+    "kitchen/3 (1.98 m)"
+   ],
+   "walls_phantom": [
+    "bedroom:bedroom/wall_1",
+    "bedroom:bedroom/wall_2",
+    "bedroom:bedroom/wall_3",
+    "hall:hall/wall_3",
+    "kitchen:kitchen/wall_0",
+    "kitchen:kitchen/wall_1",
+    "kitchen:kitchen/wall_5",
+    "kitchen:kitchen/wall_6",
+    "kitchen:kitchen/wall_7",
+    "living:living/wall_4",
+    "living:living/wall_5",
+    "living:living/wall_6",
+    "living:living/wall_7",
+    "living:living/wall_8",
+    "living:living/wall_9"
+   ],
+   "openings": {
+    "rows": [
+     {
+      "room": "bedroom",
+      "type": "window",
+      "gt": 1.2,
+      "pred": 0.76,
+      "err_cm": -44.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "kitchen",
+      "type": "window",
+      "gt": 1.0,
+      "pred": 0.84,
+      "err_cm": -16.0,
+      "hit": false,
+      "type_ok": true
+     },
+     {
+      "room": "living",
+      "type": "window",
+      "gt": 1.4,
+      "pred": 0.62,
+      "err_cm": -78.0,
+      "hit": false,
+      "type_ok": true
+     }
+    ],
+    "hits": 0,
+    "missed": [
+     "bedroom:door 0.80",
+     "hall:door 0.90",
+     "hall:door 0.80",
+     "hall:door 0.85",
+     "kitchen:door 0.85",
+     "living:door 0.90",
+     "living:window 1.00"
+    ],
+    "phantom": [
+     "bedroom:bedroom/opening_0 (window 0.60)"
+    ],
+    "n_gt": 10
+   },
+   "stitch": {
+    "gt_area": 35.788,
+    "pred_area": 43.0143,
+    "rel_err": 0.2019196378674419,
+    "covered": false,
+    "overlaps": [],
+    "unresolved": [
+     "kitchen",
+     "bedroom",
+     "hall"
+    ],
+    "adjacency_gt": [
+     [
+      "bedroom",
+      "hall"
+     ],
+     [
+      "hall",
+      "kitchen"
+     ],
+     [
+      "hall",
+      "living"
+     ]
+    ],
+    "adjacency_pred": [],
+    "adjacency_correct": false,
+    "rooms_gt": 4,
+    "rooms_pred": 4,
+    "rooms_matched": 4
+   },
+   "damage": {
+    "tp": [
+     {
+      "room": "bedroom",
+      "class": "mold",
+      "surface": "wall",
+      "gt_size": [
+       0.4,
+       0.35
+      ],
+      "pred_size": [
+       0.15,
+       0.12
+      ]
+     },
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "wall",
+      "gt_size": [
+       0.5,
+       0.4
+      ],
+      "pred_size": [
+       0.48,
+       0.33
+      ]
+     }
+    ],
+    "fp": [
+     {
+      "room": "hall",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "living",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "kitchen",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "bedroom",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "kitchen",
+      "class": "mold",
+      "surface": "wall"
+     },
+     {
+      "room": "living",
+      "class": "mold",
+      "surface": "wall"
+     }
+    ],
+    "fn": [
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "ceiling",
+      "size": [
+       0.55,
+       0.45
+      ]
+     },
+     {
+      "room": "living",
+      "class": "crack",
+      "surface": "wall",
+      "size": [
+       0.6,
+       0.02
+      ]
+     }
+    ],
+    "recall": 0.5,
+    "precision": 0.25
+   },
+   "timing": {
+    "ingest+depth+registration": 4.38,
+    "rooms+stitch": 3.81,
+    "damage+scope": 7.38,
+    "total": 15.57
+   },
+   "drift": {
+    "applied": false,
+    "reason": "not applicable: photo tier has no trajectory; rooms are placed by door matching"
+   },
+   "warnings": [
+    "room 'hall': photos not registrable and dropped: ['IMG_1000.JPG', 'IMG_1004.JPG', 'IMG_1005.JPG']",
+    "room 'kitchen': photos not registrable and dropped: ['IMG_1002.JPG']",
+    "photo stitch: room 'kitchen' could not be connected through any door; placed to the side",
+    "photo stitch: room 'bedroom' could not be connected through any door; placed to the side",
+    "photo stitch: room 'hall' could not be connected through any door; placed to the side",
+    "depth from synthetic sidecar (integration test data): not a real-world accuracy result",
+    "intervals use error-budget priors (no benchmark calibration found in configs/calibration.json)",
+    "bedroom: mirror detected (reflection agreement 0.57); phantom geometry removed",
+    "hall/wall_3: wall plane barely observed (0 points); position from footprint, interval widened",
+    "hall: mirror detected (reflection agreement 0.55); phantom geometry removed",
+    "kitchen/wall_0: wall plane barely observed (15 points); position from footprint, interval widened",
+    "kitchen/wall_6: wall plane barely observed (9 points); position from footprint, interval widened",
+    "living/wall_4: wall plane barely observed (22 points); position from footprint, interval widened",
+    "living/wall_6: wall plane barely observed (0 points); position from footprint, interval widened",
+    "living/wall_7: wall plane barely observed (0 points); position from footprint, interval widened",
+    "living/wall_8: wall plane barely observed (0 points); position from footprint, interval widened",
+    "living/wall_9: wall plane barely observed (4 points); position from footprint, interval widened"
+   ]
+  },
+  {
+   "capture": "photo_bedroom_r1",
+   "tier": "photo",
+   "records": [
+    {
+     "capture": "photo_bedroom_r1",
+     "tier": "photo",
+     "kind": "floor_area",
+     "room": "bedroom",
+     "pred": 8.1108,
+     "gt": 7.999999999999999,
+     "err": 0.11080000000000023,
+     "sigma": 0.12643,
+     "lo": 7.9028,
+     "hi": 8.3188,
+     "covered": true,
+     "iou": 0.82
+    },
+    {
+     "capture": "photo_bedroom_r1",
+     "tier": "photo",
+     "kind": "ceiling_height",
+     "room": "bedroom",
+     "pred": 2.5159,
+     "gt": 2.58,
+     "err": -0.06410000000000027,
+     "sigma": 0.12943,
+     "lo": 2.303,
+     "hi": 2.7288,
+     "covered": true
+    },
+    {
+     "capture": "photo_bedroom_r1",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 2.4791,
+     "gt": 3.2,
+     "err": -0.7209000000000003,
+     "sigma": 0.12738,
+     "lo": 2.2696,
+     "hi": 2.6887,
+     "covered": false,
+     "gt_wall": "bedroom/0",
+     "observed_fraction": 0.948
+    },
+    {
+     "capture": "photo_bedroom_r1",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 3.1092,
+     "gt": 3.2,
+     "err": -0.09080000000000021,
+     "sigma": 0.15834,
+     "lo": 2.8488,
+     "hi": 3.3697,
+     "covered": true,
+     "gt_wall": "bedroom/2",
+     "observed_fraction": 0.965
+    },
+    {
+     "capture": "photo_bedroom_r1",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 2.4446,
+     "gt": 2.4999999999999996,
+     "err": -0.05539999999999967,
+     "sigma": 0.12589,
+     "lo": 2.2375,
+     "hi": 2.6517,
+     "covered": true,
+     "gt_wall": "bedroom/1",
+     "observed_fraction": 0.961
+    },
+    {
+     "capture": "photo_bedroom_r1",
+     "tier": "photo",
+     "kind": "opening_width",
+     "room": "bedroom",
+     "pred": 0.72,
+     "gt": 1.2,
+     "err": -0.48,
+     "sigma": 0.04861,
+     "lo": 0.64,
+     "hi": 0.8,
+     "covered": false,
+     "type_pred": "window",
+     "type_gt": "window"
+    },
+    {
+     "capture": "photo_bedroom_r1",
+     "tier": "photo",
+     "kind": "footprint_area",
+     "room": "*",
+     "pred": 8.1108,
+     "gt": 7.999999999999999,
+     "err": 0.11080000000000023,
+     "sigma": 0.12643,
+     "lo": 7.9028,
+     "hi": 8.3188,
+     "covered": true
+    }
+   ],
+   "room_matches": [
+    {
+     "pred": "bedroom",
+     "gt": "bedroom",
+     "iou": 0.82
+    }
+   ],
+   "rooms_unmatched_pred": [],
+   "rooms_missed": [],
+   "walls_missed": [
+    "bedroom/3 (2.50 m)"
+   ],
+   "walls_phantom": [
+    "bedroom:bedroom/wall_1",
+    "bedroom:bedroom/wall_2",
+    "bedroom:bedroom/wall_3",
+    "bedroom:bedroom/wall_4",
+    "bedroom:bedroom/wall_5",
+    "bedroom:bedroom/wall_6",
+    "bedroom:bedroom/wall_7"
+   ],
+   "openings": {
+    "rows": [
+     {
+      "room": "bedroom",
+      "type": "window",
+      "gt": 1.2,
+      "pred": 0.72,
+      "err_cm": -48.0,
+      "hit": false,
+      "type_ok": true
+     }
+    ],
+    "hits": 0,
+    "missed": [
+     "bedroom:door 0.80"
+    ],
+    "phantom": [],
+    "n_gt": 2
+   },
+   "stitch": {
+    "gt_area": 8.0,
+    "pred_area": 8.1108,
+    "rel_err": 0.01385000000000003,
+    "covered": true,
+    "overlaps": [],
+    "unresolved": [],
+    "adjacency_gt": [],
+    "adjacency_pred": [],
+    "adjacency_correct": true,
+    "rooms_gt": 1,
+    "rooms_pred": 1,
+    "rooms_matched": 1
+   },
+   "damage": {
+    "tp": [
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "wall",
+      "gt_size": [
+       0.5,
+       0.4
+      ],
+      "pred_size": [
+       0.15,
+       0.09
+      ]
+     }
+    ],
+    "fp": [
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "wall"
+     }
+    ],
+    "fn": [
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "ceiling",
+      "size": [
+       0.55,
+       0.45
+      ]
+     },
+     {
+      "room": "bedroom",
+      "class": "mold",
+      "surface": "wall",
+      "size": [
+       0.4,
+       0.35
+      ]
+     }
+    ],
+    "recall": 0.3333333333333333,
+    "precision": 0.5
+   },
+   "timing": {
+    "ingest+depth+registration": 1.21,
+    "rooms+stitch": 0.22,
+    "damage+scope": 1.97,
+    "total": 3.4
+   },
+   "drift": {
+    "applied": false,
+    "reason": "not applicable: photo tier has no trajectory; rooms are placed by door matching"
+   },
+   "warnings": [
+    "room 'bedroom': photos not registrable and dropped: ['IMG_1003.JPG']",
+    "depth from synthetic sidecar (integration test data): not a real-world accuracy result",
+    "intervals use error-budget priors (no benchmark calibration found in configs/calibration.json)",
+    "bedroom/wall_4: wall plane barely observed (19 points); position from footprint, interval widened",
+    "bedroom: mirror detected (reflection agreement 0.76); phantom geometry removed"
+   ]
+  },
+  {
+   "capture": "photo_bedroom_r2",
+   "tier": "photo",
+   "records": [
+    {
+     "capture": "photo_bedroom_r2",
+     "tier": "photo",
+     "kind": "floor_area",
+     "room": "bedroom",
+     "pred": 9.1134,
+     "gt": 7.999999999999999,
+     "err": 1.1134000000000013,
+     "sigma": 0.12929,
+     "lo": 8.9007,
+     "hi": 9.3261,
+     "covered": false,
+     "iou": 0.736
+    },
+    {
+     "capture": "photo_bedroom_r2",
+     "tier": "photo",
+     "kind": "ceiling_height",
+     "room": "bedroom",
+     "pred": 2.4685,
+     "gt": 2.58,
+     "err": -0.11149999999999993,
+     "sigma": 0.12716,
+     "lo": 2.2594,
+     "hi": 2.6777,
+     "covered": true
+    },
+    {
+     "capture": "photo_bedroom_r2",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 3.1059,
+     "gt": 3.2,
+     "err": -0.09410000000000007,
+     "sigma": 0.15802,
+     "lo": 2.846,
+     "hi": 3.3658,
+     "covered": true,
+     "gt_wall": "bedroom/2",
+     "observed_fraction": 0.966
+    },
+    {
+     "capture": "photo_bedroom_r2",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 2.4045,
+     "gt": 2.4999999999999996,
+     "err": -0.09549999999999947,
+     "sigma": 0.12382,
+     "lo": 2.2008,
+     "hi": 2.6082,
+     "covered": true,
+     "gt_wall": "bedroom/1",
+     "observed_fraction": 0.957
+    },
+    {
+     "capture": "photo_bedroom_r2",
+     "tier": "photo",
+     "kind": "wall_length",
+     "room": "bedroom",
+     "pred": 2.5523,
+     "gt": 3.2,
+     "err": -0.6477000000000004,
+     "sigma": 0.13101,
+     "lo": 2.3368,
+     "hi": 2.7677,
+     "covered": false,
+     "gt_wall": "bedroom/0",
+     "observed_fraction": 0.96
+    },
+    {
+     "capture": "photo_bedroom_r2",
+     "tier": "photo",
+     "kind": "opening_width",
+     "room": "bedroom",
+     "pred": 0.54,
+     "gt": 1.2,
+     "err": -0.6599999999999999,
+     "sigma": 0.04238,
+     "lo": 0.4703,
+     "hi": 0.6097,
+     "covered": false,
+     "type_pred": "window",
+     "type_gt": "window"
+    },
+    {
+     "capture": "photo_bedroom_r2",
+     "tier": "photo",
+     "kind": "footprint_area",
+     "room": "*",
+     "pred": 9.1134,
+     "gt": 7.999999999999999,
+     "err": 1.1134000000000013,
+     "sigma": 0.12929,
+     "lo": 8.9007,
+     "hi": 9.3261,
+     "covered": false
+    }
+   ],
+   "room_matches": [
+    {
+     "pred": "bedroom",
+     "gt": "bedroom",
+     "iou": 0.736
+    }
+   ],
+   "rooms_unmatched_pred": [],
+   "rooms_missed": [],
+   "walls_missed": [
+    "bedroom/3 (2.50 m)"
+   ],
+   "walls_phantom": [
+    "bedroom:bedroom/wall_0",
+    "bedroom:bedroom/wall_1",
+    "bedroom:bedroom/wall_2",
+    "bedroom:bedroom/wall_3",
+    "bedroom:bedroom/wall_4"
+   ],
+   "openings": {
+    "rows": [
+     {
+      "room": "bedroom",
+      "type": "window",
+      "gt": 1.2,
+      "pred": 0.54,
+      "err_cm": -66.0,
+      "hit": false,
+      "type_ok": true
+     }
+    ],
+    "hits": 0,
+    "missed": [
+     "bedroom:door 0.80"
+    ],
+    "phantom": [
+     "bedroom:bedroom/opening_0 (window 0.62)",
+     "bedroom:bedroom/opening_2 (window 0.72)"
+    ],
+    "n_gt": 2
+   },
+   "stitch": {
+    "gt_area": 8.0,
+    "pred_area": 9.1134,
+    "rel_err": 0.1391750000000002,
+    "covered": false,
+    "overlaps": [],
+    "unresolved": [],
+    "adjacency_gt": [],
+    "adjacency_pred": [],
+    "adjacency_correct": true,
+    "rooms_gt": 1,
+    "rooms_pred": 1,
+    "rooms_matched": 1
+   },
+   "damage": {
+    "tp": [
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "wall",
+      "gt_size": [
+       0.5,
+       0.4
+      ],
+      "pred_size": [
+       0.45,
+       0.42
+      ]
+     }
+    ],
+    "fp": [],
+    "fn": [
+     {
+      "room": "bedroom",
+      "class": "water_stain",
+      "surface": "ceiling",
+      "size": [
+       0.55,
+       0.45
+      ]
+     },
+     {
+      "room": "bedroom",
+      "class": "mold",
+      "surface": "wall",
+      "size": [
+       0.4,
+       0.35
+      ]
+     }
+    ],
+    "recall": 0.3333333333333333,
+    "precision": 1.0
+   },
+   "timing": {
+    "ingest+depth+registration": 1.22,
+    "rooms+stitch": 0.24,
+    "damage+scope": 1.67,
+    "total": 3.13
+   },
+   "drift": {
+    "applied": false,
+    "reason": "not applicable: photo tier has no trajectory; rooms are placed by door matching"
+   },
+   "warnings": [
+    "depth from synthetic sidecar (integration test data): not a real-world accuracy result",
+    "intervals use error-budget priors (no benchmark calibration found in configs/calibration.json)",
+    "bedroom/wall_3: wall plane barely observed (21 points); position from footprint, interval widened"
+   ]
+  }
+ ],
+ "ablation": {
+  "lidar_full": {
+   "tier": "lidar",
+   "on": {
+    "wall_mae": 0.005122222222222213,
+    "walls_matched": 18,
+    "walls_missed": 0,
+    "footprint_rel_err": 0.0016374203643682982,
+    "rooms_matched": 4,
+    "drift": {
+     "applied": true,
+     "method": "SE2 pose graph: odometry + ICP loop closures + Manhattan yaw priors",
+     "keyframes": 185,
+     "loop_candidates": 45,
+     "loop_closures": 7,
+     "manhattan_priors": 185,
+     "max_correction_m": 0.21555774625908014,
+     "mean_correction_m": 0.1053377602442163,
+     "max_yaw_correction_deg": 2.286157063918417,
+     "final_cost": 13.246098960897385
+    }
+   },
+   "off": {
+    "wall_mae": 0.04239444444444426,
+    "walls_matched": 18,
+    "walls_missed": 0,
+    "footprint_rel_err": 0.0355091091986143,
+    "rooms_matched": 4,
+    "drift": {
+     "applied": false,
+     "reason": "disabled (--no-drift-correction)"
+    }
+   }
+  },
+  "video_full": {
+   "tier": "video",
+   "on": {
+    "wall_mae": 0.3642583333333335,
+    "walls_matched": 12,
+    "walls_missed": 6,
+    "footprint_rel_err": -0.004523862747289277,
+    "rooms_matched": 3,
+    "drift": {
+     "applied": true,
+     "method": "SE2 pose graph: odometry + ICP loop closures + Manhattan yaw priors",
+     "keyframes": 235,
+     "loop_candidates": 45,
+     "loop_closures": 5,
+     "manhattan_priors": 178,
+     "max_correction_m": 0.286703293939625,
+     "mean_correction_m": 0.1860211866957173,
+     "max_yaw_correction_deg": 3.842010974507323,
+     "final_cost": 61.21349715984596
+    }
+   },
+   "off": {
+    "wall_mae": 0.2832846153846153,
+    "walls_matched": 13,
+    "walls_missed": 5,
+    "footprint_rel_err": -0.005065943891807119,
+    "rooms_matched": 3,
+    "drift": {
+     "applied": false,
+     "reason": "disabled (--no-drift-correction)"
+    }
+   }
+  }
+ },
+ "timing_s": {
+  "lidar_full": 65.6,
+  "lidar_bedroom_r1": 11.59,
+  "lidar_bedroom_r2": 14.86,
+  "video_full": 66.99,
+  "photo_full": 15.57,
+  "photo_bedroom_r1": 3.4,
+  "photo_bedroom_r2": 3.13
+ }
+}

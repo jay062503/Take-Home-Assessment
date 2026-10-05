@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "propscan"
+version = "0.1.0"
+description = "Handheld phone capture -> dimensioned, stitched, damage-annotated property floor plan with calibrated intervals"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "opencv-python-headless>=4.8",
+  "shapely>=2.0",
+  "matplotlib>=3.7",
+  "jsonschema>=4.17",
+  "pyyaml>=6.0",
+  "pillow>=10.0",
+  "pillow-heif>=0.16",
+]
+
+[project.optional-dependencies]
+ml = ["torch>=2.1", "transformers>=4.45", "huggingface_hub>=0.23"]
+ui = ["streamlit>=1.28"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+propscan = "propscan.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["propscan*"]
+
+[tool.setuptools.package-data]
+propscan = ["../schema/*.json", "../configs/*.yaml"]

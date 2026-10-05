@@ -1,0 +1,3103 @@
+{
+  "schema_version": "1.0.0",
+  "generator": "propscan 0.1.0",
+  "capture": {
+    "id": "video_full",
+    "tier": "video",
+    "source": "C:\\handheld-property-scan\\handheld-property-scan\\data\\synthetic\\apartment_a\\video_full\\capture\\walkthrough.mp4",
+    "depth_source": "synthetic-sidecar",
+    "pose_source": "rgbd-pnp-odometry",
+    "frames_used": 683,
+    "drift_correction": {
+      "applied": true,
+      "method": "SE2 pose graph: odometry + ICP loop closures + Manhattan yaw priors",
+      "keyframes": 218,
+      "loop_candidates": 34,
+      "loop_closures": 1,
+      "manhattan_priors": 211,
+      "max_correction_m": 0.2699507188426347,
+      "mean_correction_m": 0.07152168112784911,
+      "max_yaw_correction_deg": 2.709720302761602,
+      "final_cost": 64.45895359732683
+    },
+    "synthetic": true
+  },
+  "units": "metres",
+  "confidence_level": 0.9,
+  "calibration": {
+    "status": "prior",
+    "factors": {},
+    "source": null
+  },
+  "rooms": [
+    {
+      "id": "room_0",
+      "label": "room_0",
+      "kind": "room",
+      "polygon": [
+        [
+          -2.7747,
+          -1.3085
+        ],
+        [
+          -2.7747,
+          0.7376
+        ],
+        [
+          -1.8014,
+          0.7376
+        ],
+        [
+          -1.8014,
+          3.0446
+        ],
+        [
+          1.7926,
+          3.0446
+        ],
+        [
+          1.7926,
+          -1.3085
+        ]
+      ],
+      "walls": [
+        {
+          "id": "room_0/wall_0",
+          "start": [
+            -2.7747,
+            -1.3085
+          ],
+          "end": [
+            -2.7747,
+            0.7376
+          ],
+          "length": {
+            "value": 2.0461,
+            "lo": 1.8112,
+            "hi": 2.2809,
+            "sigma": 0.14277,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.7283,
+            "lo": 2.4168,
+            "hi": 3.0399,
+            "sigma": 0.18942,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 5.5823,
+            "lo": 4.6785,
+            "hi": 6.4862,
+            "sigma": 0.5495,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.938,
+          "support_points": 81340
+        },
+        {
+          "id": "room_0/wall_1",
+          "start": [
+            -2.7747,
+            0.7376
+          ],
+          "end": [
+            -1.8014,
+            0.7376
+          ],
+          "length": {
+            "value": 0.9733,
+            "lo": 0.8582,
+            "hi": 1.0884,
+            "sigma": 0.06999,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.7283,
+            "lo": 2.4168,
+            "hi": 3.0399,
+            "sigma": 0.18942,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 2.6554,
+            "lo": 2.2188,
+            "hi": 3.092,
+            "sigma": 0.26543,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.872,
+          "support_points": 18525
+        },
+        {
+          "id": "room_0/wall_2",
+          "start": [
+            -1.8014,
+            0.7376
+          ],
+          "end": [
+            -1.8014,
+            3.0446
+          ],
+          "length": {
+            "value": 2.307,
+            "lo": 2.0428,
+            "hi": 2.5713,
+            "sigma": 0.16066,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.7283,
+            "lo": 2.4168,
+            "hi": 3.0399,
+            "sigma": 0.18942,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 6.0526,
+            "lo": 5.0345,
+            "hi": 7.0707,
+            "sigma": 0.61896,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.953,
+          "support_points": 19952
+        },
+        {
+          "id": "room_0/wall_3",
+          "start": [
+            -1.8014,
+            3.0446
+          ],
+          "end": [
+            1.7926,
+            3.0446
+          ],
+          "length": {
+            "value": 3.594,
+            "lo": 3.1839,
+            "hi": 4.0042,
+            "sigma": 0.24935,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.7283,
+            "lo": 2.4168,
+            "hi": 3.0399,
+            "sigma": 0.18942,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 8.0117,
+            "lo": 6.4286,
+            "hi": 9.5947,
+            "sigma": 0.96244,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.974,
+          "support_points": 57833
+        },
+        {
+          "id": "room_0/wall_4",
+          "start": [
+            1.7926,
+            3.0446
+          ],
+          "end": [
+            1.7926,
+            -1.3085
+          ],
+          "length": {
+            "value": 4.3531,
+            "lo": 3.8569,
+            "hi": 4.8494,
+            "sigma": 0.3017,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.7283,
+            "lo": 2.4168,
+            "hi": 3.0399,
+            "sigma": 0.18942,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 9.8219,
+            "lo": 7.9054,
+            "hi": 11.7383,
+            "sigma": 1.16511,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.981,
+          "support_points": 59350
+        },
+        {
+          "id": "room_0/wall_5",
+          "start": [
+            1.7926,
+            -1.3085
+          ],
+          "end": [
+            -2.7747,
+            -1.3085
+          ],
+          "length": {
+            "value": 4.5673,
+            "lo": 4.0468,
+            "hi": 5.0879,
+            "sigma": 0.31646,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.7283,
+            "lo": 2.4168,
+            "hi": 3.0399,
+            "sigma": 0.18942,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 11.2677,
+            "lo": 9.2572,
+            "hi": 13.2782,
+            "sigma": 1.22228,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.974,
+          "support_points": 92140
+        }
+      ],
+      "ceiling_height": {
+        "value": 2.7283,
+        "lo": 2.4168,
+        "hi": 3.0399,
+        "sigma": 0.18942,
+        "unit": "m"
+      },
+      "floor_area": {
+        "value": 17.6366,
+        "lo": 17.4591,
+        "hi": 17.8142,
+        "sigma": 0.10793,
+        "unit": "m2"
+      },
+      "perimeter": {
+        "value": 17.8409,
+        "lo": 16.9333,
+        "hi": 18.7484,
+        "sigma": 0.55176,
+        "unit": "m"
+      },
+      "openings": [
+        {
+          "id": "room_0/opening_0",
+          "type": "window",
+          "wall_id": "room_0/wall_2",
+          "center_offset": {
+            "value": 1.7925,
+            "lo": 1.7651,
+            "hi": 1.8199,
+            "sigma": 0.01665,
+            "unit": "m"
+          },
+          "width": {
+            "value": 0.465,
+            "lo": 0.3994,
+            "hi": 0.5306,
+            "sigma": 0.03986,
+            "unit": "m"
+          },
+          "height": {
+            "value": 0.52,
+            "lo": 0.4315,
+            "hi": 0.6085,
+            "sigma": 0.05379,
+            "unit": "m"
+          },
+          "sill_height": {
+            "value": 0.84,
+            "lo": 0.8016,
+            "hi": 0.8784,
+            "sigma": 0.02332,
+            "unit": "m"
+          },
+          "connects_to": null
+        },
+        {
+          "id": "room_0/opening_1",
+          "type": "door",
+          "wall_id": "room_0/wall_3",
+          "center_offset": {
+            "value": 2.3868,
+            "lo": 2.3594,
+            "hi": 2.4142,
+            "sigma": 0.01665,
+            "unit": "m"
+          },
+          "width": {
+            "value": 0.897,
+            "lo": 0.7879,
+            "hi": 1.0062,
+            "sigma": 0.06636,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.0,
+            "lo": 1.7631,
+            "hi": 2.2369,
+            "sigma": 0.144,
+            "unit": "m"
+          },
+          "sill_height": {
+            "value": 0.04,
+            "lo": 0.0016,
+            "hi": 0.0784,
+            "sigma": 0.02332,
+            "unit": "m"
+          },
+          "connects_to": "room_1"
+        },
+        {
+          "id": "room_0/opening_2",
+          "type": "window",
+          "wall_id": "room_0/wall_4",
+          "center_offset": {
+            "value": 2.2429,
+            "lo": 2.2155,
+            "hi": 2.2703,
+            "sigma": 0.01665,
+            "unit": "m"
+          },
+          "width": {
+            "value": 1.4678,
+            "lo": 1.2963,
+            "hi": 1.6392,
+            "sigma": 0.10422,
+            "unit": "m"
+          },
+          "height": {
+            "value": 1.4,
+            "lo": 1.2277,
+            "hi": 1.5723,
+            "sigma": 0.10477,
+            "unit": "m"
+          },
+          "sill_height": {
+            "value": 0.8,
+            "lo": 0.7616,
+            "hi": 0.8384,
+            "sigma": 0.02332,
+            "unit": "m"
+          },
+          "connects_to": null
+        },
+        {
+          "id": "room_0/opening_3",
+          "type": "window",
+          "wall_id": "room_0/wall_5",
+          "center_offset": {
+            "value": 3.7384,
+            "lo": 3.711,
+            "hi": 3.7658,
+            "sigma": 0.01665,
+            "unit": "m"
+          },
+          "width": {
+            "value": 1.0288,
+            "lo": 0.9055,
+            "hi": 1.1521,
+            "sigma": 0.07496,
+            "unit": "m"
+          },
+          "height": {
+            "value": 1.16,
+            "lo": 1.0125,
+            "hi": 1.3075,
+            "sigma": 0.08965,
+            "unit": "m"
+          },
+          "sill_height": {
+            "value": 1.08,
+            "lo": 1.0416,
+            "hi": 1.1184,
+            "sigma": 0.02332,
+            "unit": "m"
+          },
+          "connects_to": null
+        }
+      ],
+      "surfaces": [
+        {
+          "id": "room_0/wall_0",
+          "type": "wall"
+        },
+        {
+          "id": "room_0/wall_1",
+          "type": "wall"
+        },
+        {
+          "id": "room_0/wall_2",
+          "type": "wall"
+        },
+        {
+          "id": "room_0/wall_3",
+          "type": "wall"
+        },
+        {
+          "id": "room_0/wall_4",
+          "type": "wall"
+        },
+        {
+          "id": "room_0/wall_5",
+          "type": "wall"
+        },
+        {
+          "id": "room_0/ceiling",
+          "type": "ceiling"
+        },
+        {
+          "id": "room_0/floor",
+          "type": "floor"
+        }
+      ],
+      "features": [],
+      "quality": {
+        "floor_pts": 18020,
+        "ceiling_pts": 28081,
+        "wall_support": [
+          81340,
+          18525,
+          19952,
+          57833,
+          59350,
+          92140
+        ],
+        "wall_observed_fraction": [
+          0.94,
+          0.87,
+          0.95,
+          0.97,
+          0.98,
+          0.97
+        ]
+      }
+    },
+    {
+      "id": "room_1",
+      "label": "room_1",
+      "kind": "connector",
+      "polygon": [
+        [
+          1.8534,
+          3.134
+        ],
+        [
+          -2.8459,
+          3.134
+        ],
+        [
+          -2.8459,
+          4.3863
+        ],
+        [
+          1.8534,
+          4.3863
+        ]
+      ],
+      "walls": [
+        {
+          "id": "room_1/wall_0",
+          "start": [
+            1.8534,
+            3.134
+          ],
+          "end": [
+            -2.8459,
+            3.134
+          ],
+          "length": {
+            "value": 4.6992,
+            "lo": 4.1637,
+            "hi": 5.2348,
+            "sigma": 0.32558,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.6606,
+            "lo": 2.3567,
+            "hi": 2.9645,
+            "sigma": 0.18474,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 8.8709,
+            "lo": 6.8537,
+            "hi": 10.8881,
+            "sigma": 1.22637,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.936,
+          "support_points": 118409
+        },
+        {
+          "id": "room_1/wall_1",
+          "start": [
+            -2.8459,
+            3.134
+          ],
+          "end": [
+            -2.8459,
+            4.3863
+          ],
+          "length": {
+            "value": 1.2524,
+            "lo": 1.1067,
+            "hi": 1.398,
+            "sigma": 0.08857,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.6606,
+            "lo": 2.3567,
+            "hi": 2.9645,
+            "sigma": 0.18474,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 3.332,
+            "lo": 2.7888,
+            "hi": 3.8752,
+            "sigma": 0.33025,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.918,
+          "support_points": 20334
+        },
+        {
+          "id": "room_1/wall_2",
+          "start": [
+            -2.8459,
+            4.3863
+          ],
+          "end": [
+            1.8534,
+            4.3863
+          ],
+          "length": {
+            "value": 4.6992,
+            "lo": 4.1637,
+            "hi": 5.2348,
+            "sigma": 0.32558,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.6606,
+            "lo": 2.3567,
+            "hi": 2.9645,
+            "sigma": 0.18474,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 9.1127,
+            "lo": 7.0955,
+            "hi": 11.1299,
+            "sigma": 1.22637,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.979,
+          "support_points": 92676
+        },
+        {
+          "id": "room_1/wall_3",
+          "start": [
+            1.8534,
+            4.3863
+          ],
+          "end": [
+            1.8534,
+            3.134
+          ],
+          "length": {
+            "value": 1.2524,
+            "lo": 1.1067,
+            "hi": 1.398,
+            "sigma": 0.08857,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.6606,
+            "lo": 2.3567,
+            "hi": 2.9645,
+            "sigma": 0.18474,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 3.332,
+            "lo": 2.7888,
+            "hi": 3.8752,
+            "sigma": 0.33025,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.918,
+          "support_points": 42647
+        }
+      ],
+      "ceiling_height": {
+        "value": 2.6606,
+        "lo": 2.3567,
+        "hi": 2.9645,
+        "sigma": 0.18474,
+        "unit": "m"
+      },
+      "floor_area": {
+        "value": 5.8851,
+        "lo": 5.7369,
+        "hi": 6.0333,
+        "sigma": 0.0901,
+        "unit": "m2"
+      },
+      "perimeter": {
+        "value": 11.9032,
+        "lo": 11.1183,
+        "hi": 12.6881,
+        "sigma": 0.47717,
+        "unit": "m"
+      },
+      "openings": [
+        {
+          "id": "room_1/opening_0",
+          "type": "door",
+          "wall_id": "room_1/wall_0",
+          "center_offset": {
+            "value": 1.495,
+            "lo": 1.4676,
+            "hi": 1.5224,
+            "sigma": 0.01665,
+            "unit": "m"
+          },
+          "width": {
+            "value": 1.4885,
+            "lo": 1.3148,
+            "hi": 1.6622,
+            "sigma": 0.10561,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.44,
+            "lo": 2.1547,
+            "hi": 2.7253,
+            "sigma": 0.17344,
+            "unit": "m"
+          },
+          "sill_height": {
+            "value": 0.0,
+            "lo": -0.0384,
+            "hi": 0.0384,
+            "sigma": 0.02332,
+            "unit": "m"
+          },
+          "connects_to": "room_0"
+        },
+        {
+          "id": "room_1/opening_1",
+          "type": "door",
+          "wall_id": "room_1/wall_2",
+          "center_offset": {
+            "value": 1.2233,
+            "lo": 1.1959,
+            "hi": 1.2506,
+            "sigma": 0.01665,
+            "unit": "m"
+          },
+          "width": {
+            "value": 0.8177,
+            "lo": 0.7169,
+            "hi": 0.9185,
+            "sigma": 0.06126,
+            "unit": "m"
+          },
+          "height": {
+            "value": 1.92,
+            "lo": 1.6919,
+            "hi": 2.1481,
+            "sigma": 0.13869,
+            "unit": "m"
+          },
+          "sill_height": {
+            "value": 0.12,
+            "lo": 0.0816,
+            "hi": 0.1584,
+            "sigma": 0.02332,
+            "unit": "m"
+          },
+          "connects_to": null
+        },
+        {
+          "id": "room_1/opening_2",
+          "type": "door",
+          "wall_id": "room_1/wall_2",
+          "center_offset": {
+            "value": 3.7738,
+            "lo": 3.7464,
+            "hi": 3.8012,
+            "sigma": 0.01665,
+            "unit": "m"
+          },
+          "width": {
+            "value": 0.8751,
+            "lo": 0.7683,
+            "hi": 0.9819,
+            "sigma": 0.06495,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.08,
+            "lo": 1.8344,
+            "hi": 2.3256,
+            "sigma": 0.14932,
+            "unit": "m"
+          },
+          "sill_height": {
+            "value": 0.0,
+            "lo": -0.0384,
+            "hi": 0.0384,
+            "sigma": 0.02332,
+            "unit": "m"
+          },
+          "connects_to": "room_2"
+        }
+      ],
+      "surfaces": [
+        {
+          "id": "room_1/wall_0",
+          "type": "wall"
+        },
+        {
+          "id": "room_1/wall_1",
+          "type": "wall"
+        },
+        {
+          "id": "room_1/wall_2",
+          "type": "wall"
+        },
+        {
+          "id": "room_1/wall_3",
+          "type": "wall"
+        },
+        {
+          "id": "room_1/ceiling",
+          "type": "ceiling"
+        },
+        {
+          "id": "room_1/floor",
+          "type": "floor"
+        }
+      ],
+      "features": [],
+      "quality": {
+        "floor_pts": 7102,
+        "ceiling_pts": 3387,
+        "wall_support": [
+          118409,
+          20334,
+          92676,
+          42647
+        ],
+        "wall_observed_fraction": [
+          0.94,
+          0.92,
+          0.98,
+          0.92
+        ]
+      }
+    },
+    {
+      "id": "room_2",
+      "label": "room_2",
+      "kind": "room",
+      "polygon": [
+        [
+          -0.1489,
+          4.4187
+        ],
+        [
+          -0.1489,
+          7.0718
+        ],
+        [
+          1.8666,
+          7.0718
+        ],
+        [
+          1.8666,
+          4.4187
+        ]
+      ],
+      "walls": [
+        {
+          "id": "room_2/wall_0",
+          "start": [
+            -0.1489,
+            4.4187
+          ],
+          "end": [
+            -0.1489,
+            7.0718
+          ],
+          "length": {
+            "value": 2.6532,
+            "lo": 2.3497,
+            "hi": 2.9566,
+            "sigma": 0.18448,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.6322,
+            "lo": 2.3315,
+            "hi": 2.9329,
+            "sigma": 0.18279,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 6.9838,
+            "lo": 5.8549,
+            "hi": 8.1126,
+            "sigma": 0.68631,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.961,
+          "support_points": 42107
+        },
+        {
+          "id": "room_2/wall_1",
+          "start": [
+            -0.1489,
+            7.0718
+          ],
+          "end": [
+            1.8666,
+            7.0718
+          ],
+          "length": {
+            "value": 2.0155,
+            "lo": 1.7842,
+            "hi": 2.2468,
+            "sigma": 0.1406,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.6322,
+            "lo": 2.3315,
+            "hi": 2.9329,
+            "sigma": 0.18279,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 5.3052,
+            "lo": 4.4463,
+            "hi": 6.1641,
+            "sigma": 0.5222,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.943,
+          "support_points": 42711
+        },
+        {
+          "id": "room_2/wall_2",
+          "start": [
+            1.8666,
+            7.0718
+          ],
+          "end": [
+            1.8666,
+            4.4187
+          ],
+          "length": {
+            "value": 2.6532,
+            "lo": 2.3497,
+            "hi": 2.9566,
+            "sigma": 0.18448,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.6322,
+            "lo": 2.3315,
+            "hi": 2.9329,
+            "sigma": 0.18279,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 5.9293,
+            "lo": 4.8005,
+            "hi": 7.0582,
+            "sigma": 0.68631,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.961,
+          "support_points": 58956
+        },
+        {
+          "id": "room_2/wall_3",
+          "start": [
+            1.8666,
+            4.4187
+          ],
+          "end": [
+            -0.1489,
+            4.4187
+          ],
+          "length": {
+            "value": 2.0155,
+            "lo": 1.7842,
+            "hi": 2.2468,
+            "sigma": 0.1406,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.6322,
+            "lo": 2.3315,
+            "hi": 2.9329,
+            "sigma": 0.18279,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 3.6464,
+            "lo": 2.7874,
+            "hi": 4.5053,
+            "sigma": 0.5222,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.943,
+          "support_points": 23662
+        }
+      ],
+      "ceiling_height": {
+        "value": 2.6322,
+        "lo": 2.3315,
+        "hi": 2.9329,
+        "sigma": 0.18279,
+        "unit": "m"
+      },
+      "floor_area": {
+        "value": 5.3475,
+        "lo": 5.2459,
+        "hi": 5.449,
+        "sigma": 0.06174,
+        "unit": "m2"
+      },
+      "perimeter": {
+        "value": 9.3374,
+        "lo": 8.7978,
+        "hi": 9.8769,
+        "sigma": 0.32803,
+        "unit": "m"
+      },
+      "openings": [
+        {
+          "id": "room_2/opening_0",
+          "type": "window",
+          "wall_id": "room_2/wall_2",
+          "center_offset": {
+            "value": 1.3737,
+            "lo": 1.3463,
+            "hi": 1.4011,
+            "sigma": 0.01665,
+            "unit": "m"
+          },
+          "width": {
+            "value": 1.0139,
+            "lo": 0.8922,
+            "hi": 1.1356,
+            "sigma": 0.07397,
+            "unit": "m"
+          },
+          "height": {
+            "value": 1.04,
+            "lo": 0.9046,
+            "hi": 1.1754,
+            "sigma": 0.08231,
+            "unit": "m"
+          },
+          "sill_height": {
+            "value": 1.04,
+            "lo": 1.0016,
+            "hi": 1.0784,
+            "sigma": 0.02332,
+            "unit": "m"
+          },
+          "connects_to": null
+        },
+        {
+          "id": "room_2/opening_1",
+          "type": "door",
+          "wall_id": "room_2/wall_3",
+          "center_offset": {
+            "value": 0.9026,
+            "lo": 0.8752,
+            "hi": 0.93,
+            "sigma": 0.01665,
+            "unit": "m"
+          },
+          "width": {
+            "value": 0.864,
+            "lo": 0.7583,
+            "hi": 0.9696,
+            "sigma": 0.06423,
+            "unit": "m"
+          },
+          "height": {
+            "value": 1.92,
+            "lo": 1.6919,
+            "hi": 2.1481,
+            "sigma": 0.13869,
+            "unit": "m"
+          },
+          "sill_height": {
+            "value": 0.08,
+            "lo": 0.0416,
+            "hi": 0.1184,
+            "sigma": 0.02332,
+            "unit": "m"
+          },
+          "connects_to": "room_1"
+        }
+      ],
+      "surfaces": [
+        {
+          "id": "room_2/wall_0",
+          "type": "wall"
+        },
+        {
+          "id": "room_2/wall_1",
+          "type": "wall"
+        },
+        {
+          "id": "room_2/wall_2",
+          "type": "wall"
+        },
+        {
+          "id": "room_2/wall_3",
+          "type": "wall"
+        },
+        {
+          "id": "room_2/ceiling",
+          "type": "ceiling"
+        },
+        {
+          "id": "room_2/floor",
+          "type": "floor"
+        }
+      ],
+      "features": [],
+      "quality": {
+        "floor_pts": 11762,
+        "ceiling_pts": 20063,
+        "wall_support": [
+          42107,
+          42711,
+          58956,
+          23662
+        ],
+        "wall_observed_fraction": [
+          0.96,
+          0.94,
+          0.96,
+          0.94
+        ]
+      }
+    },
+    {
+      "id": "room_3",
+      "label": "room_3",
+      "kind": "room",
+      "polygon": [
+        [
+          -2.807,
+          5.7267
+        ],
+        [
+          -2.807,
+          6.7367
+        ],
+        [
+          -1.0254,
+          6.7367
+        ],
+        [
+          -1.0254,
+          7.9045
+        ],
+        [
+          -0.2592,
+          7.9045
+        ],
+        [
+          -0.2592,
+          5.0901
+        ],
+        [
+          -1.228,
+          5.0901
+        ],
+        [
+          -1.228,
+          5.7267
+        ]
+      ],
+      "walls": [
+        {
+          "id": "room_3/wall_0",
+          "start": [
+            -2.807,
+            5.7267
+          ],
+          "end": [
+            -2.807,
+            6.7367
+          ],
+          "length": {
+            "value": 1.01,
+            "lo": 0.8586,
+            "hi": 1.1615,
+            "sigma": 0.09209,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.681,
+            "lo": 2.3749,
+            "hi": 2.9871,
+            "sigma": 0.18609,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 2.7079,
+            "lo": 2.1975,
+            "hi": 3.2183,
+            "sigma": 0.31029,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.891,
+          "support_points": 13349
+        },
+        {
+          "id": "room_3/wall_1",
+          "start": [
+            -2.807,
+            6.7367
+          ],
+          "end": [
+            -1.0254,
+            6.7367
+          ],
+          "length": {
+            "value": 1.7816,
+            "lo": 1.5661,
+            "hi": 1.9971,
+            "sigma": 0.131,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.681,
+            "lo": 2.3749,
+            "hi": 2.9871,
+            "sigma": 0.18609,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 4.7763,
+            "lo": 3.9819,
+            "hi": 5.5708,
+            "sigma": 0.48297,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.0,
+          "support_points": 0
+        },
+        {
+          "id": "room_3/wall_2",
+          "start": [
+            -1.0254,
+            6.7367
+          ],
+          "end": [
+            -1.0254,
+            7.9045
+          ],
+          "length": {
+            "value": 1.1678,
+            "lo": 1.0023,
+            "hi": 1.3333,
+            "sigma": 0.10062,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.681,
+            "lo": 2.3749,
+            "hi": 2.9871,
+            "sigma": 0.18609,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 3.1308,
+            "lo": 2.561,
+            "hi": 3.7006,
+            "sigma": 0.3464,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.0,
+          "support_points": 3
+        },
+        {
+          "id": "room_3/wall_3",
+          "start": [
+            -1.0254,
+            7.9045
+          ],
+          "end": [
+            -0.2592,
+            7.9045
+          ],
+          "length": {
+            "value": 0.7663,
+            "lo": 0.6526,
+            "hi": 0.8799,
+            "sigma": 0.06911,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.681,
+            "lo": 2.3749,
+            "hi": 2.9871,
+            "sigma": 0.18609,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 2.0543,
+            "lo": 1.6697,
+            "hi": 2.4389,
+            "sigma": 0.23381,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.0,
+          "support_points": 4
+        },
+        {
+          "id": "room_3/wall_4",
+          "start": [
+            -0.2592,
+            7.9045
+          ],
+          "end": [
+            -0.2592,
+            5.0901
+          ],
+          "length": {
+            "value": 2.8145,
+            "lo": 2.4861,
+            "hi": 3.1428,
+            "sigma": 0.19963,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.681,
+            "lo": 2.3749,
+            "hi": 2.9871,
+            "sigma": 0.18609,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 7.5455,
+            "lo": 6.3138,
+            "hi": 8.7772,
+            "sigma": 0.74883,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.853,
+          "support_points": 46265
+        },
+        {
+          "id": "room_3/wall_5",
+          "start": [
+            -0.2592,
+            5.0901
+          ],
+          "end": [
+            -1.228,
+            5.0901
+          ],
+          "length": {
+            "value": 0.9689,
+            "lo": 0.8548,
+            "hi": 1.0829,
+            "sigma": 0.06935,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.681,
+            "lo": 2.3749,
+            "hi": 2.9871,
+            "sigma": 0.18609,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 2.5975,
+            "lo": 2.1715,
+            "hi": 3.0235,
+            "sigma": 0.25899,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.671,
+          "support_points": 14458
+        },
+        {
+          "id": "room_3/wall_6",
+          "start": [
+            -1.228,
+            5.0901
+          ],
+          "end": [
+            -1.228,
+            5.7267
+          ],
+          "length": {
+            "value": 0.6367,
+            "lo": 0.534,
+            "hi": 0.7393,
+            "sigma": 0.06241,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.681,
+            "lo": 2.3749,
+            "hi": 2.9871,
+            "sigma": 0.18609,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 1.7068,
+            "lo": 1.3696,
+            "hi": 2.0441,
+            "sigma": 0.20503,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.628,
+          "support_points": 41
+        },
+        {
+          "id": "room_3/wall_7",
+          "start": [
+            -1.228,
+            5.7267
+          ],
+          "end": [
+            -2.807,
+            5.7267
+          ],
+          "length": {
+            "value": 1.579,
+            "lo": 1.3969,
+            "hi": 1.7611,
+            "sigma": 0.1107,
+            "unit": "m"
+          },
+          "height": {
+            "value": 2.681,
+            "lo": 2.3749,
+            "hi": 2.9871,
+            "sigma": 0.18609,
+            "unit": "m"
+          },
+          "net_area": {
+            "value": 2.6203,
+            "lo": 1.9334,
+            "hi": 3.3073,
+            "sigma": 0.41764,
+            "unit": "m2"
+          },
+          "observed_fraction": 0.0,
+          "support_points": 0
+        }
+      ],
+      "ceiling_height": {
+        "value": 2.681,
+        "lo": 2.3749,
+        "hi": 2.9871,
+        "sigma": 0.18609,
+        "unit": "m"
+      },
+      "floor_area": {
+        "value": 4.0851,
+        "lo": 3.8807,
+        "hi": 4.2894,
+        "sigma": 0.12422,
+        "unit": "m2"
+      },
+      "perimeter": {
+        "value": 10.7246,
+        "lo": 10.201,
+        "hi": 11.2483,
+        "sigma": 0.31836,
+        "unit": "m"
+      },
+      "openings": [
+        {
+          "id": "room_3/opening_0",
+          "type": "door",
+          "wall_id": "room_3/wall_7",
+          "center_offset": {
+            "value": 0.819,
+            "lo": 0.7916,
+            "hi": 0.8464,
+            "sigma": 0.01665,
+            "unit": "m"
+          },
+          "width": {
+            "value": 0.84,
+            "lo": 0.7369,
+            "hi": 0.9431,
+            "sigma": 0.06269,
+            "unit": "m"
+          },
+          "height": {
+            "value": 1.92,
+            "lo": 1.6919,
+            "hi": 2.1481,
+            "sigma": 0.13869,
+            "unit": "m"
+          },
+          "sill_height": {
+            "value": 0.0,
+            "lo": -0.0384,
+            "hi": 0.0384,
+            "sigma": 0.02332,
+            "unit": "m"
+          },
+          "connects_to": null
+        }
+      ],
+      "surfaces": [
+        {
+          "id": "room_3/wall_0",
+          "type": "wall"
+        },
+        {
+          "id": "room_3/wall_1",
+          "type": "wall"
+        },
+        {
+          "id": "room_3/wall_2",
+          "type": "wall"
+        },
+        {
+          "id": "room_3/wall_3",
+          "type": "wall"
+        },
+        {
+          "id": "room_3/wall_4",
+          "type": "wall"
+        },
+        {
+          "id": "room_3/wall_5",
+          "type": "wall"
+        },
+        {
+          "id": "room_3/wall_6",
+          "type": "wall"
+        },
+        {
+          "id": "room_3/wall_7",
+          "type": "wall"
+        },
+        {
+          "id": "room_3/ceiling",
+          "type": "ceiling"
+        },
+        {
+          "id": "room_3/floor",
+          "type": "floor"
+        }
+      ],
+      "features": [
+        {
+          "type": "mirror",
+          "wall_id": "room_3/wall_4",
+          "s0": 6.411005632399527,
+          "s1": 7.210298363392027,
+          "z0": -0.7779394375604348,
+          "z1": 0.5757591461941874,
+          "reflection_agreement": 0.842,
+          "crossing_dist": 1.472407643278661
+        }
+      ],
+      "quality": {
+        "floor_pts": 787,
+        "ceiling_pts": 668,
+        "wall_support": [
+          13349,
+          0,
+          3,
+          4,
+          46265,
+          14458,
+          41,
+          0
+        ],
+        "wall_observed_fraction": [
+          0.89,
+          0.0,
+          0.0,
+          0.0,
+          0.85,
+          0.67,
+          0.63,
+          0.0
+        ]
+      }
+    }
+  ],
+  "adjacency": [
+    {
+      "a": "room_0",
+      "b": "room_1",
+      "via": [
+        "room_0/opening_1",
+        "room_1/opening_0"
+      ]
+    },
+    {
+      "a": "room_1",
+      "b": "room_2",
+      "via": [
+        "room_1/opening_2",
+        "room_2/opening_1"
+      ]
+    }
+  ],
+  "stitched_plan": {
+    "footprint_area": {
+      "value": 32.9543,
+      "lo": 32.6294,
+      "hi": 33.2792,
+      "sigma": 0.1975,
+      "unit": "m2"
+    },
+    "n_rooms": 4,
+    "method": "single global frame from RGB-D odometry + pose-graph drift correction",
+    "overlaps": [],
+    "unresolved_rooms": [],
+    "details": {
+      "method": "single global frame from RGB-D odometry + pose-graph drift correction"
+    }
+  },
+  "damage": [
+    {
+      "id": "dmg_0",
+      "surface_id": "room_0/wall_3",
+      "surface_kind": "wall",
+      "room_id": "room_0",
+      "class": "mold",
+      "bbox_surface": {
+        "u0": 0.48,
+        "u1": 0.57,
+        "v0": 1.5,
+        "v1": 1.62
+      },
+      "extent_w": {
+        "value": 0.09,
+        "lo": 0.0453,
+        "hi": 0.1347,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "extent_h": {
+        "value": 0.12,
+        "lo": 0.0753,
+        "hi": 0.1647,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "area": {
+        "value": 0.0081,
+        "lo": -0.0098,
+        "hi": 0.026,
+        "sigma": 0.01086,
+        "unit": "m2"
+      },
+      "confidence": 0.648,
+      "observed_cells": 383
+    },
+    {
+      "id": "dmg_1",
+      "surface_id": "room_0/wall_4",
+      "surface_kind": "wall",
+      "room_id": "room_0",
+      "class": "mold",
+      "bbox_surface": {
+        "u0": 0.78,
+        "u1": 0.9,
+        "v0": 1.5,
+        "v1": 1.59
+      },
+      "extent_w": {
+        "value": 0.12,
+        "lo": 0.0753,
+        "hi": 0.1647,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "extent_h": {
+        "value": 0.09,
+        "lo": 0.0453,
+        "hi": 0.1347,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "area": {
+        "value": 0.009,
+        "lo": -0.0098,
+        "hi": 0.0278,
+        "sigma": 0.01145,
+        "unit": "m2"
+      },
+      "confidence": 0.611,
+      "observed_cells": 547
+    },
+    {
+      "id": "dmg_2",
+      "surface_id": "room_0/wall_4",
+      "surface_kind": "wall",
+      "room_id": "room_0",
+      "class": "mold",
+      "bbox_surface": {
+        "u0": 0.93,
+        "u1": 1.29,
+        "v0": 1.5,
+        "v1": 1.65
+      },
+      "extent_w": {
+        "value": 0.36,
+        "lo": 0.3153,
+        "hi": 0.4047,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "extent_h": {
+        "value": 0.15,
+        "lo": 0.1053,
+        "hi": 0.1947,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "area": {
+        "value": 0.027,
+        "lo": -0.006,
+        "hi": 0.06,
+        "sigma": 0.02007,
+        "unit": "m2"
+      },
+      "confidence": 0.546,
+      "observed_cells": 1779
+    },
+    {
+      "id": "dmg_3",
+      "surface_id": "room_0/wall_5",
+      "surface_kind": "wall",
+      "room_id": "room_0",
+      "class": "mold",
+      "bbox_surface": {
+        "u0": 3.24,
+        "u1": 3.39,
+        "v0": 1.08,
+        "v1": 1.2
+      },
+      "extent_w": {
+        "value": 0.15,
+        "lo": 0.1053,
+        "hi": 0.1947,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "extent_h": {
+        "value": 0.12,
+        "lo": 0.0753,
+        "hi": 0.1647,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "area": {
+        "value": 0.0126,
+        "lo": -0.0097,
+        "hi": 0.0349,
+        "sigma": 0.01358,
+        "unit": "m2"
+      },
+      "confidence": 0.655,
+      "observed_cells": 316
+    },
+    {
+      "id": "dmg_4",
+      "surface_id": "room_1/wall_1",
+      "surface_kind": "wall",
+      "room_id": "room_1",
+      "class": "mold",
+      "bbox_surface": {
+        "u0": 0.75,
+        "u1": 0.99,
+        "v0": 1.47,
+        "v1": 1.56
+      },
+      "extent_w": {
+        "value": 0.24,
+        "lo": 0.1953,
+        "hi": 0.2847,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "extent_h": {
+        "value": 0.09,
+        "lo": 0.0453,
+        "hi": 0.1347,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "area": {
+        "value": 0.0189,
+        "lo": -0.0086,
+        "hi": 0.0464,
+        "sigma": 0.0167,
+        "unit": "m2"
+      },
+      "confidence": 0.635,
+      "observed_cells": 884
+    },
+    {
+      "id": "dmg_5",
+      "surface_id": "room_1/wall_2",
+      "surface_kind": "wall",
+      "room_id": "room_1",
+      "class": "water_stain",
+      "bbox_surface": {
+        "u0": 1.83,
+        "u1": 1.95,
+        "v0": 1.89,
+        "v1": 2.13
+      },
+      "extent_w": {
+        "value": 0.12,
+        "lo": 0.0753,
+        "hi": 0.1647,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "extent_h": {
+        "value": 0.24,
+        "lo": 0.1953,
+        "hi": 0.2847,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "area": {
+        "value": 0.0207,
+        "lo": -0.0081,
+        "hi": 0.0495,
+        "sigma": 0.0175,
+        "unit": "m2"
+      },
+      "confidence": 0.698,
+      "observed_cells": 926
+    },
+    {
+      "id": "dmg_6",
+      "surface_id": "room_1/wall_2",
+      "surface_kind": "wall",
+      "room_id": "room_1",
+      "class": "mold",
+      "bbox_surface": {
+        "u0": 1.8,
+        "u1": 1.89,
+        "v0": 1.98,
+        "v1": 2.13
+      },
+      "extent_w": {
+        "value": 0.09,
+        "lo": 0.0453,
+        "hi": 0.1347,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "extent_h": {
+        "value": 0.15,
+        "lo": 0.1053,
+        "hi": 0.1947,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "area": {
+        "value": 0.0063,
+        "lo": -0.0094,
+        "hi": 0.022,
+        "sigma": 0.00956,
+        "unit": "m2"
+      },
+      "confidence": 0.754,
+      "observed_cells": 274
+    },
+    {
+      "id": "dmg_7",
+      "surface_id": "room_2/wall_1",
+      "surface_kind": "wall",
+      "room_id": "room_2",
+      "class": "mold",
+      "bbox_surface": {
+        "u0": 1.41,
+        "u1": 1.53,
+        "v0": 1.5,
+        "v1": 1.89
+      },
+      "extent_w": {
+        "value": 0.12,
+        "lo": 0.0753,
+        "hi": 0.1647,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "extent_h": {
+        "value": 0.39,
+        "lo": 0.3453,
+        "hi": 0.4347,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "area": {
+        "value": 0.0297,
+        "lo": -0.005,
+        "hi": 0.0644,
+        "sigma": 0.02108,
+        "unit": "m2"
+      },
+      "confidence": 0.648,
+      "observed_cells": 2799
+    },
+    {
+      "id": "dmg_8",
+      "surface_id": "room_2/wall_2",
+      "surface_kind": "wall",
+      "room_id": "room_2",
+      "class": "mold",
+      "bbox_surface": {
+        "u0": 1.71,
+        "u1": 1.8,
+        "v0": 2.04,
+        "v1": 2.13
+      },
+      "extent_w": {
+        "value": 0.09,
+        "lo": 0.0453,
+        "hi": 0.1347,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "extent_h": {
+        "value": 0.09,
+        "lo": 0.0453,
+        "hi": 0.1347,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "area": {
+        "value": 0.0072,
+        "lo": -0.0096,
+        "hi": 0.024,
+        "sigma": 0.01023,
+        "unit": "m2"
+      },
+      "confidence": 0.694,
+      "observed_cells": 341
+    },
+    {
+      "id": "dmg_9",
+      "surface_id": "room_3/wall_2",
+      "surface_kind": "wall",
+      "room_id": "room_3",
+      "class": "mold",
+      "bbox_surface": {
+        "u0": 1.02,
+        "u1": 1.11,
+        "v0": 2.1,
+        "v1": 2.19
+      },
+      "extent_w": {
+        "value": 0.09,
+        "lo": 0.0453,
+        "hi": 0.1347,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "extent_h": {
+        "value": 0.09,
+        "lo": 0.0453,
+        "hi": 0.1347,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "area": {
+        "value": 0.0072,
+        "lo": -0.0096,
+        "hi": 0.024,
+        "sigma": 0.01023,
+        "unit": "m2"
+      },
+      "confidence": 0.625,
+      "observed_cells": 92
+    },
+    {
+      "id": "dmg_10",
+      "surface_id": "room_3/wall_3",
+      "surface_kind": "wall",
+      "room_id": "room_3",
+      "class": "water_stain",
+      "bbox_surface": {
+        "u0": 0.06,
+        "u1": 0.48,
+        "v0": 0.09,
+        "v1": 0.48
+      },
+      "extent_w": {
+        "value": 0.42,
+        "lo": 0.3753,
+        "hi": 0.4647,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "extent_h": {
+        "value": 0.39,
+        "lo": 0.3453,
+        "hi": 0.4347,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "area": {
+        "value": 0.1422,
+        "lo": 0.061,
+        "hi": 0.2234,
+        "sigma": 0.04934,
+        "unit": "m2"
+      },
+      "confidence": 0.625,
+      "observed_cells": 580
+    },
+    {
+      "id": "dmg_11",
+      "surface_id": "room_3/ceiling",
+      "surface_kind": "ceiling",
+      "room_id": "room_3",
+      "class": "water_stain",
+      "bbox_surface": {
+        "u0": -1.457,
+        "u1": -1.037,
+        "v0": 5.9,
+        "v1": 6.47
+      },
+      "extent_w": {
+        "value": 0.42,
+        "lo": 0.3753,
+        "hi": 0.4647,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "extent_h": {
+        "value": 0.57,
+        "lo": 0.5253,
+        "hi": 0.6147,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "area": {
+        "value": 0.1638,
+        "lo": 0.0756,
+        "hi": 0.252,
+        "sigma": 0.05359,
+        "unit": "m2"
+      },
+      "confidence": 0.592,
+      "observed_cells": 1612
+    }
+  ],
+  "concealed_damage_flags": [
+    {
+      "id": "cd_0",
+      "rule_id": "CD-04",
+      "rule": "Visible mold -> sustained moisture; growth behind the board is likely larger than the visible area. >= 0.93 m^2 (10 sq ft, US EPA guidance) requires professional remediation.",
+      "surface_id": "room_0/wall_3",
+      "damage_ids": [
+        "dmg_0"
+      ],
+      "severity": "medium",
+      "rationale": "visible area 0.01 m2"
+    },
+    {
+      "id": "cd_1",
+      "rule_id": "CD-06",
+      "rule": "Moisture damage on an interior wall -> the same wall's face in the adjacent room is flagged for inspection.",
+      "surface_id": "room_1/wall_0",
+      "damage_ids": [
+        "dmg_0"
+      ],
+      "severity": "medium",
+      "rationale": "twin face of room_0/wall_3 in room_1"
+    },
+    {
+      "id": "cd_2",
+      "rule_id": "CD-04",
+      "rule": "Visible mold -> sustained moisture; growth behind the board is likely larger than the visible area. >= 0.93 m^2 (10 sq ft, US EPA guidance) requires professional remediation.",
+      "surface_id": "room_0/wall_4",
+      "damage_ids": [
+        "dmg_1"
+      ],
+      "severity": "medium",
+      "rationale": "visible area 0.01 m2"
+    },
+    {
+      "id": "cd_3",
+      "rule_id": "CD-04",
+      "rule": "Visible mold -> sustained moisture; growth behind the board is likely larger than the visible area. >= 0.93 m^2 (10 sq ft, US EPA guidance) requires professional remediation.",
+      "surface_id": "room_0/wall_4",
+      "damage_ids": [
+        "dmg_2"
+      ],
+      "severity": "medium",
+      "rationale": "visible area 0.03 m2"
+    },
+    {
+      "id": "cd_4",
+      "rule_id": "CD-04",
+      "rule": "Visible mold -> sustained moisture; growth behind the board is likely larger than the visible area. >= 0.93 m^2 (10 sq ft, US EPA guidance) requires professional remediation.",
+      "surface_id": "room_0/wall_5",
+      "damage_ids": [
+        "dmg_3"
+      ],
+      "severity": "medium",
+      "rationale": "visible area 0.01 m2"
+    },
+    {
+      "id": "cd_5",
+      "rule_id": "CD-04",
+      "rule": "Visible mold -> sustained moisture; growth behind the board is likely larger than the visible area. >= 0.93 m^2 (10 sq ft, US EPA guidance) requires professional remediation.",
+      "surface_id": "room_1/wall_1",
+      "damage_ids": [
+        "dmg_4"
+      ],
+      "severity": "medium",
+      "rationale": "visible area 0.02 m2"
+    },
+    {
+      "id": "cd_6",
+      "rule_id": "CD-03",
+      "rule": "Elevated wall water stain (lower edge > 0.30 m) -> leak inside the wall cavity (supply/drain line, or window flashing when below a window).",
+      "surface_id": "room_1/wall_2",
+      "damage_ids": [
+        "dmg_5"
+      ],
+      "severity": "medium",
+      "rationale": "lower edge 1.89 m"
+    },
+    {
+      "id": "cd_7",
+      "rule_id": "CD-06",
+      "rule": "Moisture damage on an interior wall -> the same wall's face in the adjacent room is flagged for inspection.",
+      "surface_id": "room_2/wall_3",
+      "damage_ids": [
+        "dmg_5"
+      ],
+      "severity": "medium",
+      "rationale": "twin face of room_1/wall_2 in room_2"
+    },
+    {
+      "id": "cd_8",
+      "rule_id": "CD-04",
+      "rule": "Visible mold -> sustained moisture; growth behind the board is likely larger than the visible area. >= 0.93 m^2 (10 sq ft, US EPA guidance) requires professional remediation.",
+      "surface_id": "room_1/wall_2",
+      "damage_ids": [
+        "dmg_6"
+      ],
+      "severity": "medium",
+      "rationale": "visible area 0.01 m2"
+    },
+    {
+      "id": "cd_9",
+      "rule_id": "CD-06",
+      "rule": "Moisture damage on an interior wall -> the same wall's face in the adjacent room is flagged for inspection.",
+      "surface_id": "room_2/wall_3",
+      "damage_ids": [
+        "dmg_6"
+      ],
+      "severity": "medium",
+      "rationale": "twin face of room_1/wall_2 in room_2"
+    },
+    {
+      "id": "cd_10",
+      "rule_id": "CD-04",
+      "rule": "Visible mold -> sustained moisture; growth behind the board is likely larger than the visible area. >= 0.93 m^2 (10 sq ft, US EPA guidance) requires professional remediation.",
+      "surface_id": "room_2/wall_1",
+      "damage_ids": [
+        "dmg_7"
+      ],
+      "severity": "medium",
+      "rationale": "visible area 0.03 m2"
+    },
+    {
+      "id": "cd_11",
+      "rule_id": "CD-04",
+      "rule": "Visible mold -> sustained moisture; growth behind the board is likely larger than the visible area. >= 0.93 m^2 (10 sq ft, US EPA guidance) requires professional remediation.",
+      "surface_id": "room_2/wall_2",
+      "damage_ids": [
+        "dmg_8"
+      ],
+      "severity": "medium",
+      "rationale": "visible area 0.01 m2"
+    },
+    {
+      "id": "cd_12",
+      "rule_id": "CD-04",
+      "rule": "Visible mold -> sustained moisture; growth behind the board is likely larger than the visible area. >= 0.93 m^2 (10 sq ft, US EPA guidance) requires professional remediation.",
+      "surface_id": "room_3/wall_2",
+      "damage_ids": [
+        "dmg_9"
+      ],
+      "severity": "medium",
+      "rationale": "visible area 0.01 m2"
+    },
+    {
+      "id": "cd_13",
+      "rule_id": "CD-02",
+      "rule": "Water stain whose lower edge is within 0.30 m of the floor -> wicking from floor-level water; wall cavity, bottom plate and the far face of the wall are likely affected.",
+      "surface_id": "room_3/wall_3",
+      "damage_ids": [
+        "dmg_10"
+      ],
+      "severity": "high",
+      "rationale": "lower edge 0.09 m above floor"
+    },
+    {
+      "id": "cd_14",
+      "rule_id": "CD-01",
+      "rule": "Water stain on a ceiling -> possible active leak above (roof, plumbing, or wet room overhead); ceiling cavity insulation/joists may be wet beyond the visible stain.",
+      "surface_id": "room_3/ceiling",
+      "damage_ids": [
+        "dmg_11"
+      ],
+      "severity": "high",
+      "rationale": "water_stain 0.16 m2 on ceiling"
+    }
+  ],
+  "scope": [
+    {
+      "id": "li_0",
+      "code": "MOLD-REM",
+      "description": "Mold remediation: containment, HEPA, antimicrobial, remove affected board",
+      "surface_id": "room_0/wall_3",
+      "unit": "m2",
+      "quantity": {
+        "value": 0.4968,
+        "lo": 0.4522,
+        "hi": 0.5414,
+        "sigma": 0.02709,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_0"
+      ]
+    },
+    {
+      "id": "li_1",
+      "code": "DRY-RR",
+      "description": "Replace removed board",
+      "surface_id": "room_0/wall_3",
+      "unit": "m2",
+      "quantity": {
+        "value": 2.88,
+        "lo": 2.8354,
+        "hi": 2.9246,
+        "sigma": 0.02709,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_0"
+      ]
+    },
+    {
+      "id": "li_2",
+      "code": "MOIST-INSP",
+      "description": "Locate moisture source",
+      "surface_id": "room_0/wall_3",
+      "unit": "ea",
+      "quantity": {
+        "value": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "sigma": 0.0,
+        "unit": "ea"
+      },
+      "basis": [
+        "dmg_0"
+      ]
+    },
+    {
+      "id": "li_3",
+      "code": "PAINT-WALL",
+      "description": "Paint full wall face, 2 coats (colour match requires full face)",
+      "surface_id": "room_0/wall_3",
+      "unit": "m2",
+      "quantity": {
+        "value": 8.0117,
+        "lo": 6.4286,
+        "hi": 9.5947,
+        "sigma": 0.96244,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_0"
+      ]
+    },
+    {
+      "id": "li_4",
+      "code": "MOLD-REM",
+      "description": "Mold remediation: containment, HEPA, antimicrobial, remove affected board",
+      "surface_id": "room_0/wall_4",
+      "unit": "m2",
+      "quantity": {
+        "value": 0.4968,
+        "lo": 0.4522,
+        "hi": 0.5414,
+        "sigma": 0.02709,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_1"
+      ]
+    },
+    {
+      "id": "li_5",
+      "code": "DRY-RR",
+      "description": "Replace removed board",
+      "surface_id": "room_0/wall_4",
+      "unit": "m2",
+      "quantity": {
+        "value": 2.88,
+        "lo": 2.8354,
+        "hi": 2.9246,
+        "sigma": 0.02709,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_1"
+      ]
+    },
+    {
+      "id": "li_6",
+      "code": "MOIST-INSP",
+      "description": "Locate moisture source",
+      "surface_id": "room_0/wall_4",
+      "unit": "ea",
+      "quantity": {
+        "value": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "sigma": 0.0,
+        "unit": "ea"
+      },
+      "basis": [
+        "dmg_1"
+      ]
+    },
+    {
+      "id": "li_7",
+      "code": "PAINT-WALL",
+      "description": "Paint full wall face, 2 coats (colour match requires full face)",
+      "surface_id": "room_0/wall_4",
+      "unit": "m2",
+      "quantity": {
+        "value": 9.8219,
+        "lo": 7.9054,
+        "hi": 11.7383,
+        "sigma": 1.16511,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_1"
+      ]
+    },
+    {
+      "id": "li_8",
+      "code": "MOLD-REM",
+      "description": "Mold remediation: containment, HEPA, antimicrobial, remove affected board",
+      "surface_id": "room_0/wall_4",
+      "unit": "m2",
+      "quantity": {
+        "value": 0.72,
+        "lo": 0.6656,
+        "hi": 0.7744,
+        "sigma": 0.03309,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_2"
+      ]
+    },
+    {
+      "id": "li_9",
+      "code": "DRY-RR",
+      "description": "Replace removed board",
+      "surface_id": "room_0/wall_4",
+      "unit": "m2",
+      "quantity": {
+        "value": 2.88,
+        "lo": 2.8256,
+        "hi": 2.9344,
+        "sigma": 0.03309,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_2"
+      ]
+    },
+    {
+      "id": "li_10",
+      "code": "MOIST-INSP",
+      "description": "Locate moisture source",
+      "surface_id": "room_0/wall_4",
+      "unit": "ea",
+      "quantity": {
+        "value": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "sigma": 0.0,
+        "unit": "ea"
+      },
+      "basis": [
+        "dmg_2"
+      ]
+    },
+    {
+      "id": "li_11",
+      "code": "MOLD-REM",
+      "description": "Mold remediation: containment, HEPA, antimicrobial, remove affected board",
+      "surface_id": "room_0/wall_5",
+      "unit": "m2",
+      "quantity": {
+        "value": 0.54,
+        "lo": 0.4935,
+        "hi": 0.5865,
+        "sigma": 0.02824,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_3"
+      ]
+    },
+    {
+      "id": "li_12",
+      "code": "DRY-RR",
+      "description": "Replace removed board",
+      "surface_id": "room_0/wall_5",
+      "unit": "m2",
+      "quantity": {
+        "value": 2.88,
+        "lo": 2.8335,
+        "hi": 2.9265,
+        "sigma": 0.02824,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_3"
+      ]
+    },
+    {
+      "id": "li_13",
+      "code": "MOIST-INSP",
+      "description": "Locate moisture source",
+      "surface_id": "room_0/wall_5",
+      "unit": "ea",
+      "quantity": {
+        "value": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "sigma": 0.0,
+        "unit": "ea"
+      },
+      "basis": [
+        "dmg_3"
+      ]
+    },
+    {
+      "id": "li_14",
+      "code": "PAINT-WALL",
+      "description": "Paint full wall face, 2 coats (colour match requires full face)",
+      "surface_id": "room_0/wall_5",
+      "unit": "m2",
+      "quantity": {
+        "value": 11.2677,
+        "lo": 9.2572,
+        "hi": 13.2782,
+        "sigma": 1.22228,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_3"
+      ]
+    },
+    {
+      "id": "li_15",
+      "code": "MOLD-REM",
+      "description": "Mold remediation: containment, HEPA, antimicrobial, remove affected board",
+      "surface_id": "room_1/wall_1",
+      "unit": "m2",
+      "quantity": {
+        "value": 0.5796,
+        "lo": 0.531,
+        "hi": 0.6282,
+        "sigma": 0.02953,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_4"
+      ]
+    },
+    {
+      "id": "li_16",
+      "code": "DRY-RR",
+      "description": "Replace removed board",
+      "surface_id": "room_1/wall_1",
+      "unit": "m2",
+      "quantity": {
+        "value": 2.88,
+        "lo": 2.8314,
+        "hi": 2.9286,
+        "sigma": 0.02953,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_4"
+      ]
+    },
+    {
+      "id": "li_17",
+      "code": "MOIST-INSP",
+      "description": "Locate moisture source",
+      "surface_id": "room_1/wall_1",
+      "unit": "ea",
+      "quantity": {
+        "value": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "sigma": 0.0,
+        "unit": "ea"
+      },
+      "basis": [
+        "dmg_4"
+      ]
+    },
+    {
+      "id": "li_18",
+      "code": "PAINT-WALL",
+      "description": "Paint full wall face, 2 coats (colour match requires full face)",
+      "surface_id": "room_1/wall_1",
+      "unit": "m2",
+      "quantity": {
+        "value": 3.332,
+        "lo": 2.7888,
+        "hi": 3.8752,
+        "sigma": 0.33025,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_4"
+      ]
+    },
+    {
+      "id": "li_19",
+      "code": "MOIST-INSP",
+      "description": "Moisture mapping of affected board and cavity (meter + thermal)",
+      "surface_id": "room_1/wall_2",
+      "unit": "ea",
+      "quantity": {
+        "value": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "sigma": 0.0,
+        "unit": "ea"
+      },
+      "basis": [
+        "dmg_5"
+      ]
+    },
+    {
+      "id": "li_20",
+      "code": "SEAL-STAIN",
+      "description": "Stain-blocking primer over stain + margin",
+      "surface_id": "room_1/wall_2",
+      "unit": "m2",
+      "quantity": {
+        "value": 0.6048,
+        "lo": 0.5554,
+        "hi": 0.6542,
+        "sigma": 0.03006,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_5"
+      ]
+    },
+    {
+      "id": "li_21",
+      "code": "DRY-RR",
+      "description": "Remove and replace board where moisture > 17% WME",
+      "surface_id": "room_1/wall_2",
+      "unit": "m2",
+      "quantity": {
+        "value": 2.88,
+        "lo": 2.8306,
+        "hi": 2.9294,
+        "sigma": 0.03006,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_5"
+      ],
+      "conditional": "moisture reading above threshold"
+    },
+    {
+      "id": "li_22",
+      "code": "PAINT-WALL",
+      "description": "Paint full wall face, 2 coats (colour match requires full face)",
+      "surface_id": "room_1/wall_2",
+      "unit": "m2",
+      "quantity": {
+        "value": 9.1127,
+        "lo": 7.0955,
+        "hi": 11.1299,
+        "sigma": 1.22637,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_5"
+      ]
+    },
+    {
+      "id": "li_23",
+      "code": "MOLD-REM",
+      "description": "Mold remediation: containment, HEPA, antimicrobial, remove affected board",
+      "surface_id": "room_1/wall_2",
+      "unit": "m2",
+      "quantity": {
+        "value": 0.5175,
+        "lo": 0.472,
+        "hi": 0.563,
+        "sigma": 0.02769,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_6"
+      ]
+    },
+    {
+      "id": "li_24",
+      "code": "DRY-RR",
+      "description": "Replace removed board",
+      "surface_id": "room_1/wall_2",
+      "unit": "m2",
+      "quantity": {
+        "value": 2.88,
+        "lo": 2.8345,
+        "hi": 2.9255,
+        "sigma": 0.02769,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_6"
+      ]
+    },
+    {
+      "id": "li_25",
+      "code": "MOIST-INSP",
+      "description": "Locate moisture source",
+      "surface_id": "room_1/wall_2",
+      "unit": "ea",
+      "quantity": {
+        "value": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "sigma": 0.0,
+        "unit": "ea"
+      },
+      "basis": [
+        "dmg_6"
+      ]
+    },
+    {
+      "id": "li_26",
+      "code": "MOLD-REM",
+      "description": "Mold remediation: containment, HEPA, antimicrobial, remove affected board",
+      "surface_id": "room_2/wall_1",
+      "unit": "m2",
+      "quantity": {
+        "value": 0.7128,
+        "lo": 0.6581,
+        "hi": 0.7675,
+        "sigma": 0.03325,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_7"
+      ]
+    },
+    {
+      "id": "li_27",
+      "code": "DRY-RR",
+      "description": "Replace removed board",
+      "surface_id": "room_2/wall_1",
+      "unit": "m2",
+      "quantity": {
+        "value": 2.88,
+        "lo": 2.8253,
+        "hi": 2.9347,
+        "sigma": 0.03325,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_7"
+      ]
+    },
+    {
+      "id": "li_28",
+      "code": "MOIST-INSP",
+      "description": "Locate moisture source",
+      "surface_id": "room_2/wall_1",
+      "unit": "ea",
+      "quantity": {
+        "value": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "sigma": 0.0,
+        "unit": "ea"
+      },
+      "basis": [
+        "dmg_7"
+      ]
+    },
+    {
+      "id": "li_29",
+      "code": "PAINT-WALL",
+      "description": "Paint full wall face, 2 coats (colour match requires full face)",
+      "surface_id": "room_2/wall_1",
+      "unit": "m2",
+      "quantity": {
+        "value": 5.3052,
+        "lo": 4.4463,
+        "hi": 6.1641,
+        "sigma": 0.5222,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_7"
+      ]
+    },
+    {
+      "id": "li_30",
+      "code": "MOLD-REM",
+      "description": "Mold remediation: containment, HEPA, antimicrobial, remove affected board",
+      "surface_id": "room_2/wall_2",
+      "unit": "m2",
+      "quantity": {
+        "value": 0.4761,
+        "lo": 0.4325,
+        "hi": 0.5197,
+        "sigma": 0.02651,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_8"
+      ]
+    },
+    {
+      "id": "li_31",
+      "code": "DRY-RR",
+      "description": "Replace removed board",
+      "surface_id": "room_2/wall_2",
+      "unit": "m2",
+      "quantity": {
+        "value": 2.88,
+        "lo": 2.8364,
+        "hi": 2.9236,
+        "sigma": 0.02651,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_8"
+      ]
+    },
+    {
+      "id": "li_32",
+      "code": "MOIST-INSP",
+      "description": "Locate moisture source",
+      "surface_id": "room_2/wall_2",
+      "unit": "ea",
+      "quantity": {
+        "value": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "sigma": 0.0,
+        "unit": "ea"
+      },
+      "basis": [
+        "dmg_8"
+      ]
+    },
+    {
+      "id": "li_33",
+      "code": "PAINT-WALL",
+      "description": "Paint full wall face, 2 coats (colour match requires full face)",
+      "surface_id": "room_2/wall_2",
+      "unit": "m2",
+      "quantity": {
+        "value": 5.9293,
+        "lo": 4.8005,
+        "hi": 7.0582,
+        "sigma": 0.68631,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_8"
+      ]
+    },
+    {
+      "id": "li_34",
+      "code": "MOLD-REM",
+      "description": "Mold remediation: containment, HEPA, antimicrobial, remove affected board",
+      "surface_id": "room_3/wall_2",
+      "unit": "m2",
+      "quantity": {
+        "value": 0.4761,
+        "lo": 0.4325,
+        "hi": 0.5197,
+        "sigma": 0.02651,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_9"
+      ]
+    },
+    {
+      "id": "li_35",
+      "code": "DRY-RR",
+      "description": "Replace removed board",
+      "surface_id": "room_3/wall_2",
+      "unit": "m2",
+      "quantity": {
+        "value": 2.88,
+        "lo": 2.8364,
+        "hi": 2.9236,
+        "sigma": 0.02651,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_9"
+      ]
+    },
+    {
+      "id": "li_36",
+      "code": "MOIST-INSP",
+      "description": "Locate moisture source",
+      "surface_id": "room_3/wall_2",
+      "unit": "ea",
+      "quantity": {
+        "value": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "sigma": 0.0,
+        "unit": "ea"
+      },
+      "basis": [
+        "dmg_9"
+      ]
+    },
+    {
+      "id": "li_37",
+      "code": "PAINT-WALL",
+      "description": "Paint full wall face, 2 coats (colour match requires full face)",
+      "surface_id": "room_3/wall_2",
+      "unit": "m2",
+      "quantity": {
+        "value": 3.1308,
+        "lo": 2.561,
+        "hi": 3.7006,
+        "sigma": 0.3464,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_9"
+      ]
+    },
+    {
+      "id": "li_38",
+      "code": "MOIST-INSP",
+      "description": "Moisture mapping of affected board and cavity (meter + thermal)",
+      "surface_id": "room_3/wall_3",
+      "unit": "ea",
+      "quantity": {
+        "value": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "sigma": 0.0,
+        "unit": "ea"
+      },
+      "basis": [
+        "dmg_10"
+      ]
+    },
+    {
+      "id": "li_39",
+      "code": "SEAL-STAIN",
+      "description": "Stain-blocking primer over stain + margin",
+      "surface_id": "room_3/wall_3",
+      "unit": "m2",
+      "quantity": {
+        "value": 1.0098,
+        "lo": 0.9463,
+        "hi": 1.0733,
+        "sigma": 0.03862,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_10"
+      ]
+    },
+    {
+      "id": "li_40",
+      "code": "DRY-RR",
+      "description": "Remove and replace board where moisture > 17% WME",
+      "surface_id": "room_3/wall_3",
+      "unit": "m2",
+      "quantity": {
+        "value": 2.88,
+        "lo": 2.8165,
+        "hi": 2.9435,
+        "sigma": 0.03862,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_10"
+      ],
+      "conditional": "moisture reading above threshold"
+    },
+    {
+      "id": "li_41",
+      "code": "BASE-RR",
+      "description": "Detach and reset / replace skirting board",
+      "surface_id": "room_3/wall_3",
+      "unit": "m",
+      "quantity": {
+        "value": 1.02,
+        "lo": 0.9753,
+        "hi": 1.0647,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "basis": [
+        "dmg_10"
+      ]
+    },
+    {
+      "id": "li_42",
+      "code": "FLOOD-CUT",
+      "description": "Flood cut board to 0.6 m and dry cavity",
+      "surface_id": "room_3/wall_3",
+      "unit": "m",
+      "quantity": {
+        "value": 1.02,
+        "lo": 0.9753,
+        "hi": 1.0647,
+        "sigma": 0.02717,
+        "unit": "m"
+      },
+      "basis": [
+        "dmg_10"
+      ],
+      "conditional": "moisture reading above threshold"
+    },
+    {
+      "id": "li_43",
+      "code": "PAINT-WALL",
+      "description": "Paint full wall face, 2 coats (colour match requires full face)",
+      "surface_id": "room_3/wall_3",
+      "unit": "m2",
+      "quantity": {
+        "value": 2.0543,
+        "lo": 1.6697,
+        "hi": 2.4389,
+        "sigma": 0.23381,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_10"
+      ]
+    },
+    {
+      "id": "li_44",
+      "code": "MOIST-INSP",
+      "description": "Moisture mapping of affected board and cavity (meter + thermal)",
+      "surface_id": "room_3/ceiling",
+      "unit": "ea",
+      "quantity": {
+        "value": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "sigma": 0.0,
+        "unit": "ea"
+      },
+      "basis": [
+        "dmg_11"
+      ]
+    },
+    {
+      "id": "li_45",
+      "code": "SEAL-STAIN",
+      "description": "Stain-blocking primer over stain + margin",
+      "surface_id": "room_3/ceiling",
+      "unit": "m2",
+      "quantity": {
+        "value": 1.1934,
+        "lo": 1.124,
+        "hi": 1.2628,
+        "sigma": 0.04217,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_11"
+      ]
+    },
+    {
+      "id": "li_46",
+      "code": "DRY-RR",
+      "description": "Remove and replace board where moisture > 17% WME",
+      "surface_id": "room_3/ceiling",
+      "unit": "m2",
+      "quantity": {
+        "value": 2.88,
+        "lo": 2.8106,
+        "hi": 2.9494,
+        "sigma": 0.04217,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_11"
+      ],
+      "conditional": "moisture reading above threshold"
+    },
+    {
+      "id": "li_47",
+      "code": "PAINT-CEIL",
+      "description": "Paint full ceiling, 2 coats",
+      "surface_id": "room_3/ceiling",
+      "unit": "m2",
+      "quantity": {
+        "value": 4.0851,
+        "lo": 3.8807,
+        "hi": 4.2894,
+        "sigma": 0.12422,
+        "unit": "m2"
+      },
+      "basis": [
+        "dmg_11"
+      ]
+    }
+  ],
+  "warnings": [
+    "depth from synthetic sidecar (integration test data): not a real-world accuracy result",
+    "intervals use error-budget priors (no benchmark calibration found in configs/calibration.json)",
+    "room_3/wall_1: wall plane barely observed (0 points); position from footprint, interval widened",
+    "room_3/wall_2: wall plane barely observed (3 points); position from footprint, interval widened",
+    "room_3/wall_3: wall plane barely observed (4 points); position from footprint, interval widened",
+    "room_3/wall_7: wall plane barely observed (0 points); position from footprint, interval widened",
+    "room_3: mirror detected (reflection agreement 0.84); phantom geometry removed"
+  ],
+  "timing": {
+    "ingest+depth+odometry": 40.74,
+    "drift": 99.83,
+    "structure": 91.3,
+    "damage+scope": 24.11,
+    "total": 255.99
+  },
+  "diagnostics": {
+    "alignment": {
+      "gravity_from": "horizontal-surface normals",
+      "gravity_correction_deg": 89.9367620484783,
+      "manhattan_yaw_deg": -1.7904579063964856,
+      "manhattan_yaw_refinement_deg": -0.9500000000000108
+    },
+    "scale_fusion": {
+      "video": {
+        "applied": true,
+        "camera_height_m": 1.308,
+        "scale": 1.0569,
+        "weight_camera_prior": 0.815,
+        "scale_sigma": 0.0645
+      }
+    },
+    "manhattan_yaw_deg": 0.0796287840425972,
+    "manhattan_yaw_refinement_deg": 0.09999999999998543,
+    "global_floor_z": -1.3330946686724054,
+    "global_ceiling_z": 1.281017625694449,
+    "n_points": 2098176,
+    "mirrors": [
+      {
+        "axis": 0,
+        "coord": -0.925,
+        "facing": -1,
+        "s0": 3.2155401915273987,
+        "s1": 4.31768937926577,
+        "z0": -0.8641857659861961,
+        "z1": 0.23740128679253794,
+        "reflection_agreement": 0.67,
+        "n_points": 12164,
+        "crossing_dist": 0.6669615466874367
+      },
+      {
+        "axis": 0,
+        "coord": -0.255,
+        "facing": -1,
+        "s0": 3.2881730525700092,
+        "s1": 4.15120667560315,
+        "z0": -0.3230615377420794,
+        "z1": 0.30145476162532686,
+        "reflection_agreement": 0.465,
+        "n_points": 8186,
+        "crossing_dist": 0.45094535102952016
+      },
+      {
+        "axis": 0,
+        "coord": -0.255,
+        "facing": -1,
+        "s0": 6.411005632399527,
+        "s1": 7.210298363392027,
+        "z0": -0.7779394375604348,
+        "z1": 0.5757591461941874,
+        "reflection_agreement": 0.842,
+        "n_points": 6359,
+        "crossing_dist": 1.472407643278661
+      },
+      {
+        "axis": 1,
+        "coord": 6.405,
+        "facing": -1,
+        "s0": -2.6400162752303213,
+        "s1": -0.5370684894650155,
+        "z0": -0.7348337060495891,
+        "z1": 1.1027857584760654,
+        "reflection_agreement": 0.465,
+        "n_points": 49502,
+        "crossing_dist": 0.814644930533658
+      }
+    ],
+    "phantom_points_removed": 231454
+  }
+}

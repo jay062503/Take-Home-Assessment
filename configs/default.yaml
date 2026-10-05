@@ -1,0 +1,98 @@
+# propscan default configuration. Every key can be overridden with --config my.yaml (deep merge).
+#
+# Error-budget priors are 1-sigma values BEFORE calibration. `propscan calibrate` fits a per-tier,
+# per-quantity multiplier on the benchmark so the 90% intervals reach nominal coverage; the result is
+# written to configs/calibration.json and applied at runtime. Until a calibration exists the output
+# says calibration.status = "prior".
+
+tiers:
+  lidar:
+    frame_stride: 2            # use every Nth frame of the ARKit stream
+    pixel_stride: 2            # subsample depth pixels
+    max_depth: 4.5             # ARKit LiDAR is reliable to ~5 m
+    min_confidence: 1          # 0 low, 1 medium, 2 high
+    grid: 0.02                 # occupancy grid resolution (m)
+    wall_tol: 0.03             # point-to-wall-plane tolerance (m)
+    sys_plane: 0.004           # systematic error per plane position (m)
+    sys_scale: 0.002           # proportional scale error (fraction)
+    sys_height: 0.004
+    min_wall: 0.22             # shorter wall segments are treated as contour noise and merged away
+    min_jog: 0.08              # after plane refinement, shorter walls are removed and the polygon refit
+    poly_eps: 0.05             # contour simplification tolerance (m)
+  video:
+    sample_fps: 10.0
+    pixel_stride: 4
+    max_depth: 6.0
+    min_confidence: 0
+    grid: 0.03
+    wall_tol: 0.06
+    sys_plane: 0.012
+    sys_scale: 0.025           # monocular metric depth scale error dominates
+    sys_height: 0.015
+    min_wall: 0.35             # mono-depth walls are wavy at the ~5 cm level
+    min_jog: 0.15
+    poly_eps: 0.08
+  photo:
+    pixel_stride: 4
+    max_depth: 7.0
+    min_confidence: 0
+    grid: 0.04
+    wall_tol: 0.10
+    sys_plane: 0.02
+    sys_scale: 0.05
+    sys_height: 0.03
+    min_wall: 0.45
+    min_jog: 0.25
+    poly_eps: 0.12
+
+geometry:
+  wall_band_low: 1.0           # metres above floor; excludes most furniture
+  wall_band_high_margin: 0.15  # metres below ceiling
+  min_room_area: 1.5           # m^2
+  connector_max_width: 1.6     # rooms narrower than this are classed as connectors
+  door_min_top: 1.75
+  door_max_bottom: 0.20
+  window_min_sill: 0.30
+  opening_min_width: 0.45
+  opening_max_width: 3.2
+  jamb_refine: true            # sub-cell jamb localisation (fix loop toggle, see docs/FIX_DECLARATION.md)
+  mirror_overlap_threshold: 0.45
+
+drift:
+  enabled: true
+  keyframe_dist: 0.30
+  keyframe_angle_deg: 15
+  loop_min_gap: 25             # keyframes
+  loop_max_dist: 1.2
+  loop_max_yaw_deg: 50
+  manhattan_prior_sigma_deg: 1.0
+  odom_sigma_trans: 0.01
+  odom_sigma_trans_per_m: 0.01
+  odom_sigma_yaw_deg: 0.3
+
+depth_model:
+  name: depth-anything/Depth-Anything-V2-Metric-Indoor-Small-hf
+  device: auto
+  cache: true                  # deterministic replay of model outputs from <capture>/.cache
+  focal_rescale: true          # scale depth by (fx/long side) / training camera's; see provider.focal_scale
+  train_fx_over_long_side: 0.866   # Hypersim (DA-V2 Metric-Indoor training set): 1024 px wide, 60 deg HFOV
+  source: auto                 # auto: synthetic sidecar if present, else model | model: always run the model
+
+scale_prior:                   # RGB-only tiers: fuse model depth scale with camera height (propscan/depth/scale.py)
+  enabled: true
+  camera_height: 1.40          # protocol: phone held upright at chest height
+  camera_height_sigma: 0.10
+  model_scale_sigma: 0.15      # per-scene global scale error of a metric mono-depth model (1 sigma)
+
+damage:
+  backend: heuristic           # heuristic | owlv2 (needs `pip install .[ml]`)
+  min_area_m2: 0.004
+  keyframe_stride: 2
+
+stitch:
+  wall_thickness: 0.12         # assumed interior wall thickness when placing photo-tier rooms
+  wall_thickness_sigma: 0.04
+  door_width_tol: 0.25         # relative width mismatch allowed when pairing doors
+
+output:
+  confidence_level: 0.90

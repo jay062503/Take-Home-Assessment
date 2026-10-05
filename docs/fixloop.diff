@@ -1,0 +1,85 @@
+diff --git a/configs/default.yaml b/configs/default.yaml
+index 421714c..81254d0 100644
+--- a/configs/default.yaml
++++ b/configs/default.yaml
+@@ -46,7 +46,7 @@ geometry:
+   window_min_sill: 0.30
+   opening_min_width: 0.45
+   opening_max_width: 3.2
+-  jamb_refine: false           # sub-cell jamb localisation (fix loop toggle, see docs/FIX_DECLARATION.md)
++  jamb_refine: true            # sub-cell jamb localisation (fix loop toggle, see docs/FIX_DECLARATION.md)
+   mirror_overlap_threshold: 0.45
+ 
+ drift:
+diff --git a/propscan/geometry/structure.py b/propscan/geometry/structure.py
+index d692489..9a197e1 100644
+--- a/propscan/geometry/structure.py
++++ b/propscan/geometry/structure.py
+@@ -445,6 +445,10 @@ def detect_openings(room: Room, cloud: Cloud, cam_inside: np.ndarray, cfg: Dict,
+         zi = ((X[:, 2] - fz) / dz).astype(int)
+         ok = (si >= 0) & (si < ns) & (zi >= 0) & (zi < nz)
+         np.add.at(H_thr, (zi[ok], si[ok]), 1)
++        hs, hz = P[hit, 1 - a], P[hit, 2]
++        xs, xz = X[:, 1 - a], X[:, 2]
++        rev = inside & ~cloud.far & (nu_p < tol) & (nu_p > -0.25) & (np.abs(cloud.nrm[:, 1 - a]) > 0.8)
++        rs, rz, rn = P[rev, 1 - a], P[rev, 2], np.sign(cloud.nrm[rev, 1 - a])
+         open_ = (H_thr >= 2) & (H_thr >= 2 * H_hit + 1)
+         open_ = ndimage.binary_closing(open_, structure=np.ones((3, 3)), iterations=1)
+         open_ = ndimage.binary_opening(open_, structure=np.ones((3, 3)), iterations=1)
+@@ -468,7 +472,8 @@ def detect_openings(room: Room, cloud: Cloud, cam_inside: np.ndarray, cfg: Dict,
+             s0 = s_lo + c0 * ds
+             s1 = s_lo + (c1 + 1) * ds
+             if g.get("jamb_refine"):
+-                s0, s1, width = _refine_jambs(P, hit, a, c, w.inward, s0, s1, fz + bottom, fz + top, s_lo, s_hi, tol)
++                s0, s1 = _refine_jambs(hs, hz, xs, xz, rs, rz, rn, s0, s1, fz + bottom, fz + top)
++                width = s1 - s0
+             if width < g["opening_min_width"] or width > g["opening_max_width"]:
+                 continue
+             if bottom > g["door_max_bottom"] and top >= g["door_min_top"]:
+@@ -520,9 +525,43 @@ def _longest_run(b: np.ndarray):
+     return best
+ 
+ 
+-def _refine_jambs(P, hit, a, c, inward, s0, s1, z0, z1, s_lo, s_hi, tol):
+-    """Placeholder until the fix loop measures whether opening-edge quantisation matters."""
+-    return s0, s1, s1 - s0
++def _refine_jambs(hs, hz, xs, xz, rs, rz, rn, s0, s1, z0, z1, win=0.06, step=0.005, min_pts=8):
++    """Sub-cell jamb positions from raw evidence instead of the cell vote.
++
++    Primary: the jamb reveal. Points whose normal runs along the wall and faces into the opening
++    lie on the jamb surface itself, so their median along-wall position is the edge, which is also
++    where a tape measure reads "between the jambs". Through-rays cannot measure this: rays grazing
++    the jamb are shadowed by the reveal, so crossings stop short of the edge.
++    Fallback (no reveal seen, e.g. a cased opening viewed head-on): the decision stump separating
++    wall-plane hits from through-ray crossings, taking the wall-side end of the tie gap.
++    """
++    h = z1 - z0
++    lo, hi = z0 + 0.15 * h, z1 - 0.15 * h
++    hm = (hz > lo) & (hz < hi)
++    xm = (xz > lo) & (xz < hi)
++    rm = (rz > lo) & (rz < hi)
++
++    def edge(e, side):
++        # side=+1: opening lies at s > edge (left jamb, reveal faces +s); side=-1: the mirror case
++        R = rs[rm & (rn == side) & (np.abs(rs - e) < win)]
++        if len(R) >= min_pts:
++            return float(np.median(R))
++        H = hs[hm & (np.abs(hs - e) < win)]
++        X = xs[xm & (np.abs(xs - e) < win)]
++        if len(H) < min_pts or len(X) < min_pts:
++            return e
++        ts = np.arange(e - win, e + win + 1e-9, step)
++        if side > 0:
++            sc = (H[None, :] < ts[:, None]).mean(1) + (X[None, :] >= ts[:, None]).mean(1)
++        else:
++            sc = (H[None, :] > ts[:, None]).mean(1) + (X[None, :] <= ts[:, None]).mean(1)
++        best = ts[sc >= sc.max() - 1e-9]
++        return float(best.min() if side > 0 else best.max())
++
++    n0, n1 = edge(s0, +1), edge(s1, -1)
++    if n1 - n0 < 0.5 * (s1 - s0):
++        return s0, s1
++    return n0, n1
+ 
+ 
+ def opening_world_center(room: Room, op: Opening) -> np.ndarray:
